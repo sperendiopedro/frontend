@@ -1,0 +1,43 @@
+.fornec-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px; /* Adjust the max width as needed */
+    margin: 0px auto;
+}
+
+.form-group {
+    display: flex;
+    flex: 1 1 calc(50% - 10px); /* Two columns with a gap */
+    flex-direction: column; /* Ensures each input in the group stacks vertically */
+    gap: 10px;
+}
+
+
+.form-control {
+    flex: 1;
+    padding: 15px; /* Increase the padding for larger fields */
+    font-size: 1.2rem; /* Increase the font size for better readability */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 50px; /* Explicit height for consistency */
+    line-height: 1.2rem; /* Line height matching the font size */
+}
+
+select.form-control {
+    -webkit-appearance: none;  /* Removes default styling in Safari */
+    -moz-appearance: none;     /* Removes default styling in Firefox */
+    appearance: none;          /* Removes default styling in other browsers */
+    padding: 14px;             /* Adjust padding to match input elements */
+    height: 50px;              /* Explicit height for consistency */
+    line-height: 1.2rem;
+}
+
+.title{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
