@@ -47,7 +47,7 @@ function UserForms() {
             alert("Erro ao salvar o usuário.");
         });
     };
-    const navigate = useNavigate(); // Criar a instância de navigate
+    const navigate = useNavigate(); 
     
     const cancel = ()=>{
         setObjUser(
@@ -66,7 +66,7 @@ function UserForms() {
     return (    
        <form>
           <div className='classic-user'>
-            <h1 className="title">Registro de usuário:</h1>
+            <h1 className="title-user">Registro de usuário:</h1>
             <br></br>
             <input 
                 type="text" 

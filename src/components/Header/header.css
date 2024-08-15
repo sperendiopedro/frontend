@@ -86,8 +86,17 @@ header{
     font-weight: 600;
 }
 
-.auth{
-    width: 100px;
-    text-align: center;
-    
+.SignOut {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.SignOut:hover {
+    text-decoration: none;
+    color: #f00;
 }

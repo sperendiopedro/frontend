@@ -1,4 +1,4 @@
-.classic {
+.classic-login {
     background-color: #f9f9f9;
     width: 400px;
     padding: 40px;
@@ -13,17 +13,17 @@
     align-items: center;
 }
 
-h1 {
+.h1-login {
     font-size: 28px;
     color: #333;
     margin-bottom: 20px;
     text-align: center;
 }
 
-.form-control {
+.form-control-login {
     width: 100%;
     padding: 10px 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -31,7 +31,18 @@ h1 {
     box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
-.form-control:focus {
+.form-control-loja{
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box; 
+}
+
+.form-control-login:focus {
     border-color: #535ae5;
     outline: none;
     box-shadow: 0 0 5px rgba(83, 90, 229, 0.5);

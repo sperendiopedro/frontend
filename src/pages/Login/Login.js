@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importar useNavigate
+import { useNavigate } from 'react-router-dom';
 import "./Login.css";
 import { Link } from 'react-router-dom';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [store, setStore] = useState(''); // Adiciona o estado para a loja selecionada
     const [error, setError] = useState('');
-    const navigate = useNavigate(); // Usar useNavigate para redirecionar
+    const navigate = useNavigate();
 
     const handleLogin = async () => {
         const credentials = btoa(`${email}:${password}`);
-    
         try {
             const response = await fetch('http://localhost:8080/user/authenticate', {
                 method: 'POST',
@@ -20,39 +20,61 @@ const Login = () => {
                     'Content-Type': 'application/json',
                 },
             });
-    
+
             if (response.ok) {
-                const data = await response.json();
-                localStorage.setItem('token', data.token); // Armazena o JWT no localStorage
+                const token = await response.text();
+                localStorage.setItem('token', token);
                 setError('');
-                navigate('/user/list'); // Redireciona para uma página protegida usando navigate
+                navigate('/home');
+                window.location.reload();
             } else {
-                setError('Credenciais inválidas');
+                const errorText = await response.text();
+                setError('Credenciais inválidas: ' + errorText);
+                console.error('Erro da resposta:', errorText);
             }
         } catch (err) {
             setError('Erro de autenticação!');
-            console.error(err);
+            console.error('Erro de autenticação:', err);
+        }
+    };
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault(); // Impede o comportamento padrão do Enter
+            handleLogin();
         }
     };
 
     return (
-        <div className='classic'>
-            <h1>Login</h1>
+        <div className='classic-login'>
+            <h1 className='h1-login'>Login</h1>
             <br />
             <input 
                 type="email" 
                 placeholder="Email" 
-                className='form-control'
+                className='form-control-login'
                 value={email} 
                 onChange={(e) => setEmail(e.target.value)} 
+                onKeyDown={handleKeyDown} 
             />
             <input 
                 type="password" 
-                className='form-control'
+                className='form-control-login'
                 placeholder="Senha" 
                 value={password} 
                 onChange={(e) => setPassword(e.target.value)} 
+                onKeyDown={handleKeyDown} 
             />
+            <select 
+                className='form-control-loja' 
+                value={store} 
+                onChange={(e) => setStore(e.target.value)} 
+                onKeyDown={handleKeyDown} 
+            >
+                <option value="">Selecione a loja</option>
+                <option value="store1">Loja 1</option>
+                <option value="store2">Loja 2</option>
+            </select>
                 
             {error && <p>{error}</p>}
             <button onClick={handleLogin} className='btn btn-primary'>

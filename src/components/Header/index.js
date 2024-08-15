@@ -1,6 +1,25 @@
 import './header.css'; 
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+
 function Header(){
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (!token) {
+            window.location.reload();
+            navigate('/login');
+        }
+    }, [navigate]);
+
+    const handleLogout = () => {
+        localStorage.removeItem('token')
+        window.location.reload();
+        navigate("/login");
+    };
 
     return(
         <header>
@@ -22,9 +41,8 @@ function Header(){
             </div>
         </div>
            
-           <div className='auth'>
-            <Link className='Login' to="/login">Login</Link>
-            <Link className='SignOut' to="/"> Sair </Link>
+            <div className='auth'>
+                <button className='SignOut' onClick={handleLogout}>Sair</button>
             </div> 
         
         </header>
