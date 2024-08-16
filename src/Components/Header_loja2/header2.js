@@ -1,9 +1,10 @@
-import './header.css'; 
+import './header2.css'; 
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
-function Header(){
+
+function Header2(){
 
     const navigate = useNavigate();
 
@@ -16,15 +17,14 @@ function Header(){
     }, [navigate]);
 
     const handleLogout = () => {
-        localStorage.removeItem('token')
         window.location.reload();
+        localStorage.removeItem('token')
         navigate("/login");
     };
 
     return(
-        <header>
-        
-            <Link className="logo" to="/"> Grego </Link>
+        <header className='header-other'>
+            <Link className="logo" to="/store1/home"> GR2 </Link>
             <Link className="cadastros" to="/"> Orçamentos </Link>
             <Link className="cadastros" to="/"> Nota Fiscal </Link>
             <Link className="cadastros" to="/"> Boletos </Link>
@@ -32,21 +32,22 @@ function Header(){
             <Link className="cadastros" to="/"> Moeda </Link>
            
            
-        <div className="dropdown">
-            <div className="dropdown-toggle">Cadastros gerais</div>
-            <div className="dropdown-menu">
-                <Link className="dropdown-item" to="/ufd/register">Registro de UF</Link>
-                <Link className="dropdown-item" to="/empresa/register">Registro de empresa</Link>
-                <Link className="dropdown-item" to="/cadastros/item4">Registro de fornecedor</Link>
+        <div className="dropdown-other">
+            <div className="dropdown-toggle-other">Cadastros gerais</div>
+            <div className="dropdown-menu-other">
+                <Link className="dropdown-item-other" to="/ufd/register">Registro de UF</Link>
+                <Link className="dropdown-item-other" to="/empresa/register">Registro de empresa</Link>
+                <Link className="dropdown-item-other" to="/cadastros/item4">Registro de fornecedor</Link>
             </div>
         </div>
            
             <div className='auth'>
-                <button className='SignOut' onClick={handleLogout}>Sair</button>
+                <button className='SignOut-other' onClick={handleLogout}>Sair</button>
             </div> 
         
         </header>
     )
 }
 
-export default Header; 
+
+export default Header2;

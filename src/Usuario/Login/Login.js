@@ -3,14 +3,20 @@ import { useNavigate } from 'react-router-dom';
 import "./Login.css";
 import { Link } from 'react-router-dom';
 
+//constante login handle
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [store, setStore] = useState(''); // Adiciona o estado para a loja selecionada
+    const [store, setStore] = useState(''); 
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
     const handleLogin = async () => {
+        if(!email||!password || !store){
+            setError("Por favor, preencha todos os campos")
+            return;
+        }
+
         const credentials = btoa(`${email}:${password}`);
         try {
             const response = await fetch('http://localhost:8080/user/authenticate', {
@@ -24,8 +30,13 @@ const Login = () => {
             if (response.ok) {
                 const token = await response.text();
                 localStorage.setItem('token', token);
+                localStorage.setItem('store', store); 
                 setError('');
-                navigate('/home');
+                if (store === 'store1') {
+                    navigate('/store1/home');
+                } else if (store === 'store2') {
+                    navigate('/store2/home');
+                }
                 window.location.reload();
             } else {
                 const errorText = await response.text();

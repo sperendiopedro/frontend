@@ -1,0 +1,102 @@
+.header-one{
+    display: flex;
+    position: relative; /* Permite que o header role junto com a página */
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 45px;
+    background-color: #040871;
+}
+
+.logo{
+    text-decoration: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.cadastros{
+    text-decoration: none;
+    font-size: 15px;
+    cursor:  pointer; 
+    color:#FFF;
+    font-weight: 600;
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #FFF;
+    padding: 0; 
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f8f9fa;
+    box-shadow: none;
+    border: none;
+    min-width: 200px;
+    z-index: 1;
+    top: 100%; 
+    left: 0; 
+    
+   
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: #b2b6ff;
+}
+
+.Login{
+    text-decoration: none;
+    font-size: 15px;
+    cursor:  pointer; 
+    color:white;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.SignOut{
+    text-decoration: none;
+    font-size: 15px;
+    cursor:  pointer; 
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+.SignOut {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0;
+}
+
+.SignOut:hover {
+    text-decoration: none;
+    color: rgb(238, 82, 21);
+}
