@@ -1,19 +1,86 @@
-.titulo{
+.ufd-loja1 {
+    background-color: #d0d1d4;
+    margin-top: 46px;
+    width: 70%;
+    height: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ufd-titulo {
     text-align: center;
-    font-size: 10px;
+    font-size: 45px;
     font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.form{
-    width: 600px;
-    height: 300px;
+.ufd-form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Add spacing between form elements */
 }
 
-.input{
-    width: 100px;
+.ufd-form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-.btn{
-    margin-top: 15px;
-    margin-left: 25px;
-  }
+.ufd-form-control::placeholder {
+    color: #888; /* Ensure placeholder text is visible */
+}
+
+.button-ufd-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+.btn-ufd-register,
+.btn-ufd-cancel {
+    flex: 1;
+    margin: 0 5px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-ufd-register {
+    background-color: #535ae5;
+    color: #fff;
+}
+
+.btn-ufd-register:hover {
+    background-color: #4349d2;
+    transform: scale(1.05);
+}
+
+.btn-ufd-cancel {
+    background-color: #ff851b;
+    color: #fff;
+}
+
+.btn-ufd-cancel:hover {
+    background-color: #e6761d;
+    transform: scale(1.05);
+}

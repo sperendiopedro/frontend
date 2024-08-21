@@ -65,3 +65,12 @@ function Fornec() {
 }
 
 export default Fornec;
+
+
+/*useEffect(() => {
+    fetch("http://localhost:8080/ufd/listUfd")
+        .then(response => response.json())
+        .then(data => setUfdOptions(data))
+        .catch(error => console.error("Erro ao carregar UFDs:", error));
+}, []);
+*/

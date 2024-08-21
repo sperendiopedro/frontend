@@ -20,10 +20,10 @@ function UserForms() {
     };
 
     const cadastrar = () => {
-        const { nome, setor, email, password, userRole } = objUser;
+        const { nome, setor, email, password} = objUser;
 
         // Validação dos campos
-        if (!nome || !setor || !email || !password || !userRole) {
+        if (!nome || !setor || !email || !password) {
             alert("Preencha todos os campos!");
             return; 
         }
@@ -43,8 +43,7 @@ function UserForms() {
                     nome: '', 
                     setor: '',
                     email: '',
-                    password: '',
-                    userRole: ''
+                    password: ''
                 });
                 navigate("/login");
 
@@ -65,8 +64,7 @@ function UserForms() {
             nome: '', 
             setor: '',
             email: '',
-            password: '',
-            userRole: ''
+            password: ''
         });
         navigate('/login');
     };
@@ -108,16 +106,8 @@ function UserForms() {
                     placeholder="Senha" 
                     className="form-control"
                 />
-                <input 
-                    type="text" 
-                    onChange={aoDigitar} 
-                    name='userRole' 
-                    value={objUser.userRole}
-                    placeholder="Permissões" 
-                    className="form-control"
-                />
-                
-                <div className="button-group">
+         
+                <div className="button-user-group">
                     <input 
                         type="button" 
                         value="Inserir" 

@@ -1,20 +1,107 @@
-.title{
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.emp-loja1 {
+    background-color: #d0d1d4;
+    margin-top: 46px;
+    width: 70%;
+    height: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.emp-titulo {
     text-align: center;
     font-size: 45px;
-    
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.form{
-    width: 500px;
-    margin: 30px auto; 
-    text-align: center;
+
+.emp-content {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
-.btn{
-    margin-top: 15px;
-    margin-left: 25px;
-  }
+.emp-form{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Add spacing between form elements */
+}
 
-select {
-    margin: 10px 0; 
+.emp-form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.form-control:focus {
+    border-color: #535ae5;
+    box-shadow: 0 0 8px rgba(83, 90, 229, 0.2);
+    outline: none;
+}
+
+.emp-form-control::placeholder {
+    color: #888; 
+}
+
+.button-emp-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+.btn-emp-register,
+.btn-emp-cancel {
+    flex: 1;
+    margin: 0 5px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-emp-register {
+    background-color: #535ae5;
+    color: #fff;
+}
+
+.btn-emp-register:hover {
+    background-color: #4349d2;
+    transform: scale(1.05);
+}
+
+.btn-emp-cancel {
+    background-color: #ff851b;
+    color: #fff;
+}
+
+.btn-emp-cancel:hover {
+    background-color: #e6761d;
+    transform: scale(1.05);
 }
