@@ -18,7 +18,7 @@ function EmpForms() {
         obs: ''
     });
 
-    const aoDigitar = (e) => {
+    const handleChange = (e) => {
         const { name, value } = e.target;
         const convertedValue = 
             name === "relSoc" || name === "nrCupom" 
@@ -31,7 +31,7 @@ function EmpForms() {
         }));
     };
 
-    const cadastrar = () => {
+    const handleSubmit = () => {
         const token = localStorage.getItem('token');
         fetch("http://localhost:8080/empresa/saveEmp", {
             method: "POST",
@@ -86,7 +86,7 @@ function EmpForms() {
                     <input
                         type="text"
                         name="razSoc"
-                        onChange={aoDigitar}
+                        onChange={handleChange}
                         value={objEmp.razSoc}
                         placeholder="Razão social"
                         className="form-control"
@@ -94,7 +94,7 @@ function EmpForms() {
                     <input
                         type="text"
                         name="nomeFant"
-                        onChange={aoDigitar}
+                        onChange={handleChange}
                         value={objEmp.nomeFant}
                         placeholder="Nome Fantasia"
                         className="form-control"
@@ -102,7 +102,7 @@ function EmpForms() {
                     <input
                         type="text"
                         name="end"
-                        onChange={aoDigitar}
+                        onChange={handleChange}
                         value={objEmp.end}
                         placeholder="Endereço"
                         className="form-control"
@@ -110,7 +110,7 @@ function EmpForms() {
                     <input
                         type="text"
                         name="bairro"
-                        onChange={aoDigitar}
+                        onChange={handleChange}
                         value={objEmp.bairro}
                         placeholder="Bairro"
                         className="form-control"
@@ -118,7 +118,7 @@ function EmpForms() {
                     <input
                         type="text"
                         name="cep"
-                        onChange={aoDigitar}
+                        onChange={handleChange}
                         value={objEmp.cep}
                         placeholder="CEP"
                         className="form-control"
@@ -126,7 +126,7 @@ function EmpForms() {
                     <input
                         type="text"
                         name="cnpj"
-                        onChange={aoDigitar}
+                        onChange={handleChange}
                         value={objEmp.cnpj}
                         placeholder="CNPJ"
                         className="form-control"
@@ -134,7 +134,7 @@ function EmpForms() {
                     <input
                         type="text"
                         name="inscrMun"
-                        onChange={aoDigitar}
+                        onChange={handleChange}
                         value={objEmp.inscrMun}
                         placeholder="Inscrição municipal"
                         className="form-control"
@@ -142,7 +142,7 @@ function EmpForms() {
                     <input
                         type="text"
                         name="inscrEst"
-                        onChange={aoDigitar}
+                        onChange={handleChange}
                         value={objEmp.inscrEst}
                         placeholder="Inscrição estadual"
                         className="form-control"
@@ -150,7 +150,7 @@ function EmpForms() {
                     <input
                         type="text"
                         name="telefone"
-                        onChange={aoDigitar}
+                        onChange={handleChange}
                         value={objEmp.telefone}
                         placeholder="Telefone"
                         className="form-control"
@@ -158,7 +158,7 @@ function EmpForms() {
                     <input
                         type="text"
                         name="email"
-                        onChange={aoDigitar}
+                        onChange={handleChange}
                         value={objEmp.email}
                         placeholder="Email"
                         className="form-control"
@@ -166,7 +166,7 @@ function EmpForms() {
                     <input
                         type="number"
                         name="relSoc"
-                        onChange={aoDigitar}
+                        onChange={handleChange}
                         value={objEmp.relSoc}
                         placeholder="Relação social"
                         className="form-control"
@@ -174,7 +174,7 @@ function EmpForms() {
                     <input
                         type="number"
                         name="nrCupom"
-                        onChange={aoDigitar}
+                        onChange={handleChange}
                         value={objEmp.nrCupom}
                         placeholder="Número Cupom"
                         className="form-control"
@@ -182,7 +182,7 @@ function EmpForms() {
                     <input
                         type="text"
                         name="obs"
-                        onChange={aoDigitar}
+                        onChange={handleChange}
                         value={objEmp.obs}
                         placeholder="Observações"
                         className="form-control"
@@ -192,7 +192,7 @@ function EmpForms() {
                             type="button"
                             value="Inserir"
                             className="btn btn-emp-register"
-                            onClick={cadastrar}
+                            onClick={handleSubmit}
                         />
                         <input 
                             type="button" 

@@ -24,7 +24,7 @@ function Header2(){
 
     return(
         <header className='header-other'>
-            <Link className="logo" to="/store1/home"> GR2 </Link>
+            <Link className="logo" to="/store2/home"> GR2 </Link>
             <Link className="cadastros" to="/"> Orçamentos </Link>
             <Link className="cadastros" to="/"> Nota Fiscal </Link>
             <Link className="cadastros" to="/"> Boletos </Link>
@@ -35,9 +35,8 @@ function Header2(){
         <div className="dropdown-other">
             <div className="dropdown-toggle-other">Cadastros gerais</div>
             <div className="dropdown-menu-other">
-                <Link className="dropdown-item-other" to="/ufd/register">Registro de UF</Link>
-                <Link className="dropdown-item-other" to="/empresa/register">Registro de empresa</Link>
-                <Link className="dropdown-item-other" to="/cadastros/item4">Registro de fornecedor</Link>
+                <Link className="dropdown-item-other" to="store2/ufd/register">Registro de Estado</Link>
+                <Link className="dropdown-item-other" to="store2/fornec/register">Registro de fornecedor</Link>
             </div>
         </div>
            

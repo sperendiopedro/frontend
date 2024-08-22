@@ -10,6 +10,8 @@ import PrivateRoute from './privateRoutes';
 import Home1 from "./Pages_loja1/Home/Home1";
 import Header2 from "./Components/Header_loja2/header2";
 import Home2 from "./Pages_loja2/Home/Home2";
+import UFDForms2 from "./Pages_loja2/Cadastros/Ufd/UFDForms2";
+import Fornec2 from "./Pages_loja2/Cadastros/Fornecedor/Fornec2";
 
 
 
@@ -27,10 +29,12 @@ function RoutesApp() {
        
         <Route path="/store1/home" element={<PrivateRoute element={<Home1 />} />} />
         <Route path="/store2/home" element={<PrivateRoute element={<Home2 />} />} />
-        <Route path="/ufd/register" element={<PrivateRoute element={<UFDForms />} />} />
-        <Route path="/ufd/list" element={<PrivateRoute element={<UFDList />} />} />
-        <Route path="/empresa/register" element={<PrivateRoute element={<EmpForms />} />} />
-        <Route path="/fornec/register" element={<PrivateRoute element={<Fornec />} />} />
+        <Route path="/store1/ufd/register" element={<PrivateRoute element={<UFDForms />} />} />
+        <Route path="/store2/ufd/register" element={<PrivateRoute element={<UFDForms2 />} />} />
+        <Route path="/store1/ufd/list" element={<PrivateRoute element={<UFDList />} />} />
+        <Route path="/store1/empresa/register" element={<PrivateRoute element={<EmpForms />} />} />
+        <Route path="/store1/fornec/register" element={<PrivateRoute element={<Fornec />} />} />
+        <Route path="/store2/fornec/register" element={<PrivateRoute element={<Fornec2 />} />} />
       </Routes>
     </BrowserRouter>
   );

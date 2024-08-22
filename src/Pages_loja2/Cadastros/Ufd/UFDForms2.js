@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import "./ufd.css"; 
+import "./UFD2.css"; 
 
-function UFDForms() {
+function UFDForms2() {
     const [objUfd, setObjUfd] = useState({
         ufd_emp: { id: 0 },
         nome: '',
@@ -72,7 +72,7 @@ function UFDForms() {
 
 
     return (
-        <div className="ufd-loja1">
+        <div className="home-loja2">
             <form className="ufd-form" onSubmit={handleSubmit}> 
                 <h1 className="ufd-titulo">Registro de estado</h1>
                 <br></br>
@@ -120,4 +120,4 @@ function UFDForms() {
     );
 }
 
-export default UFDForms;
+export default UFDForms2;

@@ -42,7 +42,7 @@ const initialFormState = {
     pc_cr_icms_3: 0
 };
 
-function Fornec() {
+function Fornec2() {
     const [ufdOptions, setUfdOptions] = useState([]);
     const [objFornec, setObjFornec] = useState(initialFormState);
 
@@ -121,7 +121,7 @@ function Fornec() {
     };
 
     return (
-        <div className='fornec-loja1'>
+        <div className='fornec-loja2'>
             <div className='fornec1-content'>
                 <h1 className='fornec1-titulo'>Registro de fornecedor</h1>
                 <form className="fornec1-form">       
@@ -254,6 +254,6 @@ function Fornec() {
     );
 }
 
-export default Fornec;
+export default Fornec2;
 
 
