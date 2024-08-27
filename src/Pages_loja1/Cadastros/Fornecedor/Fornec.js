@@ -49,7 +49,10 @@ function Fornec() {
     const token = localStorage.getItem('token');
 
     useEffect(() => {
-        fetch("http://localhost:8080/ufd/listUfd", {
+        const store = localStorage.getItem('store'); 
+        const idStore = store === 'store1' ? 1 : 2; 
+        
+        fetch(`http://localhost:8080/ufd/listByEmp/${idStore}`, {
             method: 'GET', 
             headers: {
                 'Authorization': `Bearer ${token}`, 
@@ -62,7 +65,9 @@ function Fornec() {
             }
             return response.json();
         })
-        .then(data => setUfdOptions(data))
+        .then(data => {
+            setUfdOptions(data); 
+        })
         .catch(error => console.error("Erro ao carregar UFDs:", error));
     }, [token]);
 

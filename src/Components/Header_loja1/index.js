@@ -35,7 +35,6 @@ function Header(){
         <div className="dropdown">
             <div className="dropdown-toggle">Cadastros gerais</div>
             <div className="dropdown-menu">
-                <Link className="dropdown-item" to="/store1/empresa/register">Registro de empresa</Link>
                 <Link className="dropdown-item" to="/store1/ufd/register">Registro de estado</Link>
                 <Link className="dropdown-item" to="/store1/fornec/register">Registro de fornecedor</Link>
             </div>

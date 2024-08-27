@@ -22,7 +22,6 @@ function UserForms() {
     const cadastrar = () => {
         const { nome, setor, email, password} = objUser;
 
-        // Validação dos campos
         if (!nome || !setor || !email || !password) {
             alert("Preencha todos os campos!");
             return; 
@@ -38,7 +37,6 @@ function UserForms() {
         .then(response => {
             if (response.ok) {
                 alert("Usuário salvo com sucesso!");
-                // Reset form
                 setObjUser({
                     nome: '', 
                     setor: '',

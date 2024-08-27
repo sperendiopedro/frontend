@@ -3,7 +3,7 @@ import "./UFD2.css";
 
 function UFDForms2() {
     const [objUfd, setObjUfd] = useState({
-        ufd_emp: { id: 0 },
+        ufdEmp: { id: 0 },
         nome: '',
         sigla: '', 
         aliqIcms: 0 
@@ -15,7 +15,7 @@ function UFDForms2() {
         const idStore = store==='store1' ? 1 : 2;  
         setObjUfd(prevState => ({
             ...prevState,
-            ufd_emp: { id: Number(idStore) } 
+            ufdEmp: { id: Number(idStore) } 
         }));
     }, []);
     
@@ -43,16 +43,17 @@ function UFDForms2() {
             if (response.ok) {
                 console.log('UFD registered successfully');
                 setObjUfd({
-                    ufd_emp: { id: Number(localStorage.getItem('idStore')) },
+                    ufdEmp: { id: Number(localStorage.getItem('idStore')) },
                     nome: '',
                     sigla: '',
                     aliqIcms: 0 
                 });
             } else {
-            
+                const store = localStorage.getItem('store');
+                const idStore = store==='store1' ? 1 : 2; 
                 const errorText = await response.text(); 
                 console.error('Failed to register UFD:', errorText); 
-  
+                console.log('teste', idStore);
 
                 
             }
@@ -63,7 +64,7 @@ function UFDForms2() {
 
     const handleCancel = () => {
         setObjUfd({
-            ufd_emp: { id: Number(localStorage.getItem('idStore')) },
+            ufdEmp: { id: Number(localStorage.getItem('idStore')) },
             nome: '',
             sigla: '',
             aliqIcms: 0 

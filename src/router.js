@@ -32,7 +32,7 @@ function RoutesApp() {
         <Route path="/store1/ufd/register" element={<PrivateRoute element={<UFDForms />} />} />
         <Route path="/store2/ufd/register" element={<PrivateRoute element={<UFDForms2 />} />} />
         <Route path="/store1/ufd/list" element={<PrivateRoute element={<UFDList />} />} />
-        <Route path="/store1/empresa/register" element={<PrivateRoute element={<EmpForms />} />} />
+        <Route path="/empresa/register" element={<PrivateRoute element={<EmpForms />} />} />
         <Route path="/store1/fornec/register" element={<PrivateRoute element={<Fornec />} />} />
         <Route path="/store2/fornec/register" element={<PrivateRoute element={<Fornec2 />} />} />
       </Routes>
