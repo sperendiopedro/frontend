@@ -1,7 +1,8 @@
 import { useState } from "react";
-import "./Emp.css";
+import "./emp.css";
 
-function EmpForms() {
+function EmpForms1() {
+    
     const [objEmp, setObjEmp] = useState({
         razSoc: '',
         nomeFant: '',
@@ -78,7 +79,7 @@ function EmpForms() {
     };
 
     return (
-        <div className="emp-loja1">
+        <div className="emp">
             <div className="emp-content">
                 <form className="emp-form">
                 <h1>Registro de empresa </h1>
@@ -207,4 +208,4 @@ function EmpForms() {
     );
 }
 
-export default EmpForms;
+export default EmpForms1;

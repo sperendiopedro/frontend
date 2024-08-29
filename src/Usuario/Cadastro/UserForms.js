@@ -11,7 +11,7 @@ function UserForms() {
         userRole: ''
     });
 
-    const aoDigitar = (e) => {
+    const handleChange = (e) => {
         const { name, value } = e.target;
         setObjUser(prevState => ({
             ...prevState,
@@ -19,7 +19,7 @@ function UserForms() {
         }));
     };
 
-    const cadastrar = () => {
+    const handleSubmit = () => {
         const { nome, setor, email, password} = objUser;
 
         if (!nome || !setor || !email || !password) {
@@ -69,12 +69,12 @@ function UserForms() {
 
     return (    
         <form>
-            <div className='classic-user'>
+            <div className='classic-user' onSubmit={handleSubmit}>
                 <h1 className="title-user">Registro de usuário:</h1>
                 <br></br>
                 <input 
                     type="text" 
-                    onChange={aoDigitar} 
+                    onChange={handleChange} 
                     name='nome' 
                     value={objUser.nome}
                     placeholder="Nome" 
@@ -82,7 +82,7 @@ function UserForms() {
                 /> 
                 <input 
                     type="text" 
-                    onChange={aoDigitar} 
+                    onChange={handleChange} 
                     name='setor' 
                     value={objUser.setor}
                     placeholder="Setor" 
@@ -90,7 +90,7 @@ function UserForms() {
                 /> 
                 <input 
                     type="email" 
-                    onChange={aoDigitar} 
+                    onChange={handleChange} 
                     name='email' 
                     value={objUser.email}
                     placeholder="Email" 
@@ -98,7 +98,7 @@ function UserForms() {
                 />
                 <input 
                     type="password" 
-                    onChange={aoDigitar} 
+                    onChange={handleChange} 
                     name='password' 
                     value={objUser.password}
                     placeholder="Senha" 
@@ -107,9 +107,9 @@ function UserForms() {
          
                 <div className="button-user-group">
                     <input 
-                        type="button" 
+                        type="submit" 
                         value="Inserir" 
-                        onClick={cadastrar} 
+                        on
                         className="btn btn-user-register" 
                     /> 
         

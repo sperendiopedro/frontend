@@ -73,50 +73,52 @@ function UFDForms2() {
 
 
     return (
-        <div className="home-loja2">
-            <form className="ufd-form" onSubmit={handleSubmit}> 
-                <h1 className="ufd-titulo">Registro de estado</h1>
-                <br></br>
-                <input 
-                    type="text" 
-                    name="nome"
-                    placeholder="Nome do Estado" 
-                    className="form-control" 
-                    value={objUfd.nome}
-                    onChange={handleChange}
-                /> 
-                <input 
-                    type="text" 
-                    name="sigla"
-                    placeholder="Sigla" 
-                    className="form-control" 
-                    value={objUfd.sigla}
-                    onChange={handleChange}
-                /> 
-                <input 
-                    type="text" 
-                    name="aliqIcms"
-                    placeholder="Aliq_ICMS" 
-                    className="form-control" 
-                    value={objUfd.aliqIcms}
-                    onChange={handleChange}
-                /> 
+        <div className="ufd2-loja2">
+            <div className='ufd2-content'></div>
+                <h1 className="ufd2-titulo">Registro de estado</h1>
 
-                <div className="button-ufd-group">
+                <form className="ufd2-form" onSubmit={handleSubmit}> 
+                    <br></br>
                     <input 
-                        type="submit" 
-                        value="inserir"
-                        className="btn btn-user-register" 
+                        type="text" 
+                        name="nome"
+                        placeholder="Nome do Estado" 
+                        className="ufd2-form-control" 
+                        value={objUfd.nome}
+                        onChange={handleChange}
+                    /> 
+                    <input 
+                        type="text" 
+                        name="sigla"
+                        placeholder="Sigla" 
+                        className="ufd2-form-control" 
+                        value={objUfd.sigla}
+                        onChange={handleChange}
+                    /> 
+                    <input 
+                        type="text" 
+                        name="aliqIcms"
+                        placeholder="Aliq_ICMS" 
+                        className="ufd2-form-control" 
+                        value={objUfd.aliqIcms}
+                        onChange={handleChange}
                     /> 
         
-                    <input 
-                        type="button"
-                        value="Cancelar"
-                        onClick={handleCancel}
-                        className="btn btn-user-cancel"
-                    />
-                </div>
-            </form>
+                    <div className="button-ufd2-group">
+                        <input 
+                            type="submit" 
+                            value="inserir"
+                            className="btn btn-ufd2-register" 
+                        /> 
+            
+                        <input 
+                            type="button"
+                            value="Cancelar"
+                            onClick={handleCancel}
+                            className="btn btn-ufd2-cancel"
+                        />
+                    </div>
+                </form>
         </div>
     );
 }

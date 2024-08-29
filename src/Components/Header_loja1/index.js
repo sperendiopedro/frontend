@@ -37,6 +37,10 @@ function Header(){
             <div className="dropdown-menu">
                 <Link className="dropdown-item" to="/store1/ufd/register">Registro de estado</Link>
                 <Link className="dropdown-item" to="/store1/fornec/register">Registro de fornecedor</Link>
+                <Link className="dropdown-item" to="/store1/familia/register">Registro de familia</Link>
+                <Link className="dropdown-item" to="/store1/produto/register">Registro de produto</Link>
+                <Link className="dropdown-item" to="/store1/acabmat/register">Registro de acabmat* </Link>
+                <Link className="dropdown-item" to="/store1/cor/register">Registro de cor</Link>
             </div>
         </div>
            

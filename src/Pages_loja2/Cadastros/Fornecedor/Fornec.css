@@ -1,16 +1,127 @@
-.fornec-loja2 {
-    background-color: #ffffff;
+.fornec2 {
+    background-color: #f4ffe7; /* Lighter background for a cleaner look */
     margin-top: 46px;
-    width: 70%;
-    height: 100%;
+    width: 80%;
+    max-width: 900px; /* Constrain the width on larger screens */
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Softer, deeper shadow */
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.fornec2:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); /* Shadow effect on hover */
+}
+
+.fornec2-titulo {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+    text-transform: uppercase; /* Adds emphasis */
+    letter-spacing: 1.2px; /* Slight spacing for readability */
+}
+
+.fornec2-content {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.fornec2-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Increased gap for more breathing room */
+}
+
+.fornec2-form-group {
+    display: contents; /* Ensures elements stay in grid layout */
+}
+
+.fornec2-form-control {
+    width: 100%;
+    padding: 12px; /* More padding for larger clickable area */
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 8px; /* Softer border-radius */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    background-color: #fff;
+    outline: none; /* Remove default focus outline */
+}
+
+.fornec2-form-control:focus {
+    border-color: #000000;
+    box-shadow: 0 0 10px rgba(83, 90, 229, 0.2); /* Smooth focus effect */
+}
+
+.fornec2-form-control::placeholder {
+    color: #000000;
+}
+
+.fornec2-button-group {
+    grid-column: span 2; /* Makes the button group span both columns */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.fornec2-btn-register,
+.fornec2-btn-cancel {
+    flex: 1;
+    margin: 0 10px; /* Slightly larger margin between buttons */
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.fornec2-btn-register {
+    background-color: #5366e5;
+    color: #fff;
+}
+
+.fornec2-btn-register:hover {
+    background-color: #4349d2;
+    transform: scale(1.04);
+}
+
+.fornec2-btn-cancel {
+    background-color: #ff6b1b;
+    color: #fff;
+}
+
+.fornec2-btn-cancel:hover {
+    background-color: #e65a17;
+    transform: scale(1.04);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .fornec2-form {
+        grid-template-columns: 1fr; /* Stacks elements on small screens */
+    }
+
+    .fornec-loja1 {
+        width: 95%; /* More compact on mobile */
+        padding: 20px;
+    }
+
+    .fornec2-button-group {
+        flex-direction: column; /* Buttons stack vertically */
+    }
+
+    .fornec2-btn-register,
+    .fornec2-btn-cancel {
+        margin: 5px 0; /* Adjust margin for stacked buttons */
+    }
 }

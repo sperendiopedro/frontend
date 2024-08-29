@@ -126,16 +126,16 @@ function Fornec2() {
     };
 
     return (
-        <div className='fornec-loja2'>
-            <div className='fornec1-content'>
-                <h1 className='fornec1-titulo'>Registro de fornecedor</h1>
-                <form className="fornec1-form">       
-                    <div className="fornec1-form-group">
+        <div className='fornec2'>
+            <div className='fornec2-content'>
+                <h1 className='fornec2-titulo'>Registro de fornecedor</h1>
+                <form className="fornec2-form">       
+                    <div className="fornec2-form-group">
                         <select
                             name="fornec_ufd"
                             value={objFornec.fornec_ufd.id} 
                             onChange={handleSelectChange} 
-                            className="fornec1-form-control"
+                            className="fornec2-form-control"
                         >
                             <option value="">Selecione a UF do Fornecedor</option>
                             {ufdOptions.map((ufd) => (
@@ -144,112 +144,112 @@ function Fornec2() {
                                 </option>
                             ))}
                         </select>
-                        <input type="text" onChange={handleChange} name="razSoc" placeholder="Razão social" className="fornec1-form-control" value={objFornec.razSoc} />
+                        <input type="text" onChange={handleChange} name="razSoc" placeholder="Razão social" className="fornec2-form-control" value={objFornec.razSoc} />
                     </div>
 
-                    <div className="fornec1-form-group">
-                        <input type="text"  onChange={handleChange} name="nomeFant" placeholder="Nome Fantasia" className="fornec1-form-control" />
-                        <input type="text"  onChange={handleChange} name="end" placeholder="Endereço" className="fornec1-form-control" />
+                    <div className="fornec2-form-group">
+                        <input type="text"  onChange={handleChange} name="nomeFant" placeholder="Nome Fantasia" className="fornec2-form-control" />
+                        <input type="text"  onChange={handleChange} name="end" placeholder="Endereço" className="fornec2-form-control" />
                     </div>
                 
-                    <div className="fornec1-form-group">
-                        <input type="text"  onChange={handleChange} name="bairro" placeholder="Bairro" className="fornec1-form-control" />
-                        <input type="text" onChange={handleChange}  name="cep" placeholder="CEP" className="fornec1-form-control" />
+                    <div className="fornec2-form-group">
+                        <input type="text"  onChange={handleChange} name="bairro" placeholder="Bairro" className="fornec2-form-control" />
+                        <input type="text" onChange={handleChange}  name="cep" placeholder="CEP" className="fornec2-form-control" />
                     </div>
                 
-                    <div className="fornec1-form-group">
-                        <input type="text"  onChange={handleChange} name="municipio" placeholder="Municipio" className="fornec1-form-control" />
-                        <input type="text"  onChange={handleChange} name="contato" placeholder="Contato" className="fornec1-form-control" />
+                    <div className="fornec2-form-group">
+                        <input type="text"  onChange={handleChange} name="municipio" placeholder="Municipio" className="fornec2-form-control" />
+                        <input type="text"  onChange={handleChange} name="contato" placeholder="Contato" className="fornec2-form-control" />
                 
                     </div>
                 
-                    <div className="fornec1-form-group">
-                        <input type="text"  onChange={handleChange} name="dep" placeholder="Departamento" className="fornec1-form-control" />
-                        <input type="number" onChange={handleChange} name="tipoJF" placeholder="Tipo JF" className="fornec1-form-control" />
+                    <div className="fornec2-form-group">
+                        <input type="text"  onChange={handleChange} name="dep" placeholder="Departamento" className="fornec2-form-control" />
+                        <input type="number" onChange={handleChange} name="tipoJF" placeholder="Tipo JF" className="fornec2-form-control" />
                     </div>
 
-                    <div className='fornec1-form-group'>
+                    <div className='fornec2-form-group'>
                 
-                        <input type="text"  onChange={handleChange} name="cnpj" placeholder="CNPJ" className="fornec1-form-control" />
-                        <input type="text"  onChange={handleChange} name="inscrEst" placeholder="Inscrição estadual" className="fornec1-form-control" />
+                        <input type="text"  onChange={handleChange} name="cnpj" placeholder="CNPJ" className="fornec2-form-control" />
+                        <input type="text"  onChange={handleChange} name="inscrEst" placeholder="Inscrição estadual" className="fornec2-form-control" />
                     </div>
                 
-                    <div className="fornec1-form-group">
-                        <input type="text" onChange={handleChange} name="inscrMun" placeholder="Inscrição municipal" className="fornec1-form-control" />
-                        <input type="text" onChange={handleChange} name="telefone_1" placeholder="Telefone 1" className="fornec1-form-control" />
+                    <div className="fornec2-form-group">
+                        <input type="text" onChange={handleChange} name="inscrMun" placeholder="Inscrição municipal" className="fornec2-form-control" />
+                        <input type="text" onChange={handleChange} name="telefone_1" placeholder="Telefone 1" className="fornec2-form-control" />
                     </div>
                 
-                    <div className="fornec1-form-group">
-                        <input type="text"  onChange={handleChange} name="telefone_2" placeholder="Telefone 2" className="fornec1-form-control" />
-                        <input type="text"  onChange={handleChange} name="telefone_3" placeholder="Telefone 3" className="fornec1-form-control" />
+                    <div className="fornec2-form-group">
+                        <input type="text"  onChange={handleChange} name="telefone_2" placeholder="Telefone 2" className="fornec2-form-control" />
+                        <input type="text"  onChange={handleChange} name="telefone_3" placeholder="Telefone 3" className="fornec2-form-control" />
                     </div>
                 
-                    <div className="fornec1-form-group">
-                        <input type="email"  onChange={handleChange} name="email_1" placeholder="Email 1" className="fornec1-form-control" />
-                        <input type="email"  onChange={handleChange} name="email_2" placeholder="Email 2" className="fornec1-form-control" />
+                    <div className="fornec2-form-group">
+                        <input type="email"  onChange={handleChange} name="email_1" placeholder="Email 1" className="fornec2-form-control" />
+                        <input type="email"  onChange={handleChange} name="email_2" placeholder="Email 2" className="fornec2-form-control" />
                     </div>
                 
-                   <div className="fornec1-form-group"> 
-                        <input type="email"  onChange={handleChange} name="email_3" placeholder="Email 3" className="fornec1-form-control" />
-                        <input type="text"  onChange={handleChange} name="desc_1" placeholder="Descrição 1" className="fornec1-form-control" />
+                   <div className="fornec2-form-group"> 
+                        <input type="email"  onChange={handleChange} name="email_3" placeholder="Email 3" className="fornec2-form-control" />
+                        <input type="text"  onChange={handleChange} name="desc_1" placeholder="Descrição 1" className="fornec2-form-control" />
                     </div>
                     
-                    <div className="fornec1-form-group"> 
-                        <input type="text"  onChange={handleChange} name="desc_2" placeholder="Descrição 2" className="fornec1-form-control" />
-                        <input type="text"  onChange={handleChange} name="desc_3" placeholder="Descrição 3" className="fornec1-form-control" />
+                    <div className="fornec2-form-group"> 
+                        <input type="text"  onChange={handleChange} name="desc_2" placeholder="Descrição 2" className="fornec2-form-control" />
+                        <input type="text"  onChange={handleChange} name="desc_3" placeholder="Descrição 3" className="fornec2-form-control" />
                     </div>
 
-                    <div className="fornec1-form-group"> 
-                        <input type="text"  onChange={handleChange} name="desc_4" placeholder="Descrição 4" className="fornec1-form-control" />
-                        <input type="text"  onChange={handleChange} name="desc_5" placeholder="Descrição 5" className="fornec1-form-control" />
+                    <div className="fornec2-form-group"> 
+                        <input type="text"  onChange={handleChange} name="desc_4" placeholder="Descrição 4" className="fornec2-form-control" />
+                        <input type="text"  onChange={handleChange} name="desc_5" placeholder="Descrição 5" className="fornec2-form-control" />
                     </div>
 
-                    <div className="fornec1-form-group"> 
-                        <input type="text"  onChange={handleChange} name="desc_6" placeholder="Descrição 6" className="fornec1-form-control" />
-                        <input type="text"  onChange={handleChange} name="diferen" placeholder="Diferencial" className="fornec1-form-control" />
+                    <div className="fornec2-form-group"> 
+                        <input type="text"  onChange={handleChange} name="desc_6" placeholder="Descrição 6" className="fornec2-form-control" />
+                        <input type="text"  onChange={handleChange} name="diferen" placeholder="Diferencial" className="fornec2-form-control" />
                     </div>
 
-                    <div className="fornec1-form-group"> 
-                        <input type="text"  onChange={handleChange} name="rep_1" placeholder="rep 1" className="fornec1-form-control" />
-                        <input type="text"  onChange={handleChange} name="rep_2" placeholder="rep 2" className="fornec1-form-control" />
+                    <div className="fornec2-form-group"> 
+                        <input type="text"  onChange={handleChange} name="rep_1" placeholder="rep 1" className="fornec2-form-control" />
+                        <input type="text"  onChange={handleChange} name="rep_2" placeholder="rep 2" className="fornec2-form-control" />
                     </div>
 
-                    <div className="fornec1-form-group"> 
-                        <input type="text"  onChange={handleChange} name="rep_3" placeholder="rep 3" className="fornec1-form-control" />
-                        <input type="text"  onChange={handleChange} name="rep_4" placeholder="rep 4" className="fornec1-form-control" />
+                    <div className="fornec2-form-group"> 
+                        <input type="text"  onChange={handleChange} name="rep_3" placeholder="rep 3" className="fornec2-form-control" />
+                        <input type="text"  onChange={handleChange} name="rep_4" placeholder="rep 4" className="fornec2-form-control" />
                     </div>
                     
-                    <div className="fornec1-form-group"> 
-                        <input type="text"  onChange={handleChange} name="obs" placeholder="Observação" className="fornec1-form-control" />
-                        <input type="text"  onChange={handleChange} name="plan_obs" placeholder="crd icsm MAX:1" className="fornec1-form-control" />
+                    <div className="fornec2-form-group"> 
+                        <input type="text"  onChange={handleChange} name="obs" placeholder="Observação" className="fornec2-form-control" />
+                        <input type="text"  onChange={handleChange} name="plan_obs" placeholder="crd icsm MAX:1" className="fornec2-form-control" />
                     </div>
                     
-                    <div className="fornec1-form-group"> 
-                        <select onChange={handleChange} name="bloq" className="fornec1-form-control">
+                    <div className="fornec2-form-group"> 
+                        <select onChange={handleChange} name="bloq" className="fornec2-form-control">
                             <option value="">Bloqueado</option>
                             <option value="TRUE">Sim</option>
                             <option value="FALSE">Não</option>
                         </select> 
-                        <input type="number"  onChange={handleChange} name="pc_cr_icms_1" placeholder="pc_cr_icms_1" className="fornec1-form-control" />
+                        <input type="number"  onChange={handleChange} name="pc_cr_icms_1" placeholder="pc_cr_icms_1" className="fornec2-form-control" />
                     </div>
                     
-                    <div className="fornec1-form-group"> 
-                        <input type="number"  onChange={handleChange} name="pc_cr_icms_2" placeholder="pc_cr_icms_2" className="fornec1-form-control" />
-                        <input type="number"  onChange={handleChange} name="pc_cr_icms_3" placeholder="pc_cr_icms_3" className="fornec1-form-control" />    
+                    <div className="fornec2-form-group"> 
+                        <input type="number"  onChange={handleChange} name="pc_cr_icms_2" placeholder="pc_cr_icms_2" className="fornec2-form-control" />
+                        <input type="number"  onChange={handleChange} name="pc_cr_icms_3" placeholder="pc_cr_icms_3" className="fornec2-form-control" />    
                     </div>
 
 
-                   <div className="fornec1-button-group">
+                   <div className="fornec2-button-group">
                         <input
                             type="button"
                             value="Inserir"
-                            className="btn fornec1-btn-register"
+                            className="btn fornec2-btn-register"
                             onClick={handleSubmit}
                         />
                         <input 
                             type="button" 
                             value="Cancelar"
-                            className="btn fornec1-btn-cancel"
+                            className="btn fornec2-btn-cancel"
                             onClick={handleCancel}
                         />
                     </div>

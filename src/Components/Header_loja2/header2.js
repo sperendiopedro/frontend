@@ -37,6 +37,10 @@ function Header2(){
             <div className="dropdown-menu-other">
                 <Link className="dropdown-item-other" to="store2/ufd/register">Registro de Estado</Link>
                 <Link className="dropdown-item-other" to="store2/fornec/register">Registro de fornecedor</Link>
+                <Link className="dropdown-item" to="/store2/familia/register">Registro de familia</Link>
+                <Link className="dropdown-item" to="/store2/produto/register">Registro de produto</Link>
+                <Link className="dropdown-item" to="/store2/acabmat/register">Registro de acabmat* </Link>
+                <Link className="dropdown-item" to="/store2/cor/register">Registro de cor</Link>
             </div>
         </div>
            

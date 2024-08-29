@@ -1,16 +1,116 @@
-.home-loja2 {
-    background-color: #ffffff;
+.ufd2-loja2 {
+    background-color: #f4ffe7; /* Lighter background for a cleaner look */
     margin-top: 46px;
-    width: 70%;
-    height: 100%;
+    width: 80%;
+    max-width: 900px; /* Constrain the width on larger screens */
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Softer, deeper shadow */
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.ufd2-titulo {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+    text-transform: uppercase; /* Adds emphasis */
+    letter-spacing: 1.2px; /* Slight spacing for readability */
+}
+
+.ufd2-content {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ufd2-form {
+    width: 100%;
+    display: contents;
+    gap: 20px; /* Increased gap for more breathing room */
+}
+
+.ufd2-form-group {
+    display: contents; /* Ensures elements stay in grid layout */
+}
+
+.ufd2-form-control {
+    width: 100%;
+    padding: 12px; /* More padding for larger clickable area */
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 8px; /* Softer border-radius */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    background-color: #fff;
+    outline: none; /* Remove default focus outline */
+}
+
+.ufd2-form-control:focus {
+    border-color: #5366e5;
+    box-shadow: 0 0 10px rgba(83, 90, 229, 0.2); /* Smooth focus effect */
+}
+
+.ufd2-form-control::placeholder {
+    color: #000000;
+}
+
+.button-ufd2-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+.btn-ufd2-register,
+.btn-ufd2-cancel {
+    flex: 1;
+    margin: 0 10px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-ufd2-register {
+    background-color: #00ab03;
+    color: #fff;
+}
+
+.btn-ufd2-register:hover {
+    background-color: #88e35b;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(83, 90, 229, 0.2); /* Adiciona uma leve sombra */
+}
+
+.btn-ufd2-cancel {
+    background-color: #b60000;
+    color: #fff;
+}
+
+.btn-ufd2-cancel:hover {
+    background-color: #f32a2a;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 133, 27, 0.2);
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .ufd2-loja1 {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .button-ufd2-group {
+        flex-direction: column;
+        gap: 10px; 
+    }
 }
