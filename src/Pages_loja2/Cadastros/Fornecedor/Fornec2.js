@@ -206,17 +206,17 @@ function Fornec2() {
 
                     <div className="fornec2-form-group"> 
                         <input type="text"  onChange={handleChange} name="desc_6" placeholder="Descrição 6" className="fornec2-form-control" />
-                        <input type="text"  onChange={handleChange} name="diferen" placeholder="Diferencial" className="fornec2-form-control" />
+                        <input type="number"  onChange={handleChange} name="diferen" placeholder="Diferencial" className="fornec2-form-control" />
                     </div>
 
                     <div className="fornec2-form-group"> 
-                        <input type="text"  onChange={handleChange} name="rep_1" placeholder="rep 1" className="fornec2-form-control" />
-                        <input type="text"  onChange={handleChange} name="rep_2" placeholder="rep 2" className="fornec2-form-control" />
+                        <input type="number"  onChange={handleChange} name="rep_1" placeholder="rep 1" className="fornec2-form-control" />
+                        <input type="number"  onChange={handleChange} name="rep_2" placeholder="rep 2" className="fornec2-form-control" />
                     </div>
 
                     <div className="fornec2-form-group"> 
-                        <input type="text"  onChange={handleChange} name="rep_3" placeholder="rep 3" className="fornec2-form-control" />
-                        <input type="text"  onChange={handleChange} name="rep_4" placeholder="rep 4" className="fornec2-form-control" />
+                        <input type="number"  onChange={handleChange} name="rep_3" placeholder="rep 3" className="fornec2-form-control" />
+                        <input type="number"  onChange={handleChange} name="rep_4" placeholder="rep 4" className="fornec2-form-control" />
                     </div>
                     
                     <div className="fornec2-form-group"> 

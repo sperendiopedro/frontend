@@ -84,7 +84,7 @@ function UFDForms() {
                     type="text" 
                     name="nome"
                     placeholder="Nome do Estado" 
-                    className="form-control" 
+                    className="ufd-form-control" 
                     value={objUfd.nome}
                     onChange={handleChange}
                 /> 
@@ -92,15 +92,15 @@ function UFDForms() {
                     type="text" 
                     name="sigla"
                     placeholder="Sigla" 
-                    className="form-control" 
+                    className="ufd-form-control" 
                     value={objUfd.sigla}
                     onChange={handleChange}
                 /> 
                 <input 
-                    type="text" 
+                    type="number" 
                     name="aliqIcms"
                     placeholder="Aliq_ICMS" 
-                    className="form-control" 
+                    className="ufd-form-control" 
                     value={objUfd.aliqIcms}
                     onChange={handleChange}
                 /> 
@@ -109,14 +109,14 @@ function UFDForms() {
                     <input 
                         type="submit" 
                         value="inserir"
-                        className="btn btn-user-register" 
+                        className="btn btn-ufd-register" 
                     /> 
         
                     <input 
                         type="button"
                         value="Cancelar"
                         onClick={handleCancel}
-                        className="btn btn-user-cancel"
+                        className="btn btn-ufd-cancel"
                     />
                 </div>
             </form>

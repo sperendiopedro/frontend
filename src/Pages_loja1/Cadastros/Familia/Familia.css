@@ -16,8 +16,10 @@
     text-align: center;
     font-size: 45px;
     font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
+    margin-bottom: 30px;
+    color: #000000;
+    text-transform: uppercase; 
+    letter-spacing: 1.2px; 
 }
 
 .familia-form {
@@ -28,24 +30,38 @@
     gap: 20px; /* Maior espaçamento para melhorar a leitura */
 }
 
-.familia-form input {
+.familia-form-control {
     width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    padding: 12px; /* More padding for larger clickable area */
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Softer border-radius */
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    background-color: #fff;
+    outline: none; /* Remove default focus outline */
 }
 
-.familia-form input::placeholder {
-    color: #888;
+.familia-form-control-obs {
+    width: 100%;
+    padding: 12px; /* More padding for larger clickable area */
+    height: 200px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Softer border-radius */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    background-color: #fff;
+    outline: none; /* Remove default focus outline */
 }
 
-.familia-form input:focus {
-    border-color: #535ae5;
-    box-shadow: 0 0 5px rgba(83, 90, 229, 0.5); /* Destaque no foco */
-    outline: none;
+.familia-form-control:focus {
+    border-color: #5366e5;
+    box-shadow: 0 0 10px rgba(83, 90, 229, 0.2); /* Smooth focus effect */
+}
+
+.familia-form-control::placeholder {
+    color: #000000;
 }
 
 .button-familia-group {
@@ -97,9 +113,16 @@
         width: 90%;
         padding: 30px;
     }
-
+    .familia-form {
+        grid-template-columns: 1fr; /* Stacks elements on small screens */
+    }
     .button-familia-group {
         flex-direction: column;
         gap: 10px; 
     }
+    .btn-familia-register,
+    .btn-familia-cancel {
+        margin: 5px 0; /* Adjust margin for stacked buttons */
+    }
 }
+

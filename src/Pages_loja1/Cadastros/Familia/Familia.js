@@ -81,10 +81,11 @@ function Familia(){
                     type="text" 
                     onChange={handleChange}
                     value={objFam.obs}
-                    name="Observação"
-                    className="familia-form-control"
+                    name="obs"
                     placeholder="Observação" 
+                    className="familia-form-control-obs"
                 /> 
+             
 
                 <div className="button-familia-group">
                     <input 

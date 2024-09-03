@@ -14,10 +14,12 @@
 
 .ufd-titulo {
     text-align: center;
-    font-size: 45px;
+    font-size: 48px;
     font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
+    margin-bottom: 30px;
+    color: #000000;
+    text-transform: uppercase; /* Adds emphasis */
+    letter-spacing: 1.2px; /* Slight spacing for readability */
 }
 
 .ufd-form {
@@ -28,45 +30,46 @@
     gap: 20px; /* Maior espaçamento para melhorar a leitura */
 }
 
-.ufd-form input {
+.ufd-form-control {
     width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    padding: 12px; /* More padding for larger clickable area */
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Softer border-radius */
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    background-color: #fff;
+    outline: none; /* Remove default focus outline */
 }
 
-.ufd-form input::placeholder {
-    color: #888;
+.ufd-form-control:focus {
+    border-color: #5366e5;
+    box-shadow: 0 0 10px rgba(83, 90, 229, 0.2); /* Smooth focus effect */
 }
 
-.ufd-form input:focus {
-    border-color: #535ae5;
-    box-shadow: 0 0 5px rgba(83, 90, 229, 0.5); /* Destaque no foco */
-    outline: none;
+.ufd-form-control::placeholder {
+    color: #000000;
 }
 
 .button-ufd-group {
+    grid-column: span 2; /* Makes the button group span both columns */
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 600px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .btn-ufd-register,
 .btn-ufd-cancel {
     flex: 1;
-    margin: 0 10px;
-    padding: 15px 20px;
+    margin: 0 10px; /* Slightly larger margin between buttons */
+    padding: 14px 24px;
     border: none;
-    border-radius: 5px;
-    font-size: 18px;
+    border-radius: 8px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-ufd-register {
@@ -76,8 +79,7 @@
 
 .btn-ufd-register:hover {
     background-color: #4349d2;
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(83, 90, 229, 0.2); /* Adiciona uma leve sombra */
+    transform: scale(1.04);
 }
 
 .btn-ufd-cancel {
@@ -87,8 +89,7 @@
 
 .btn-ufd-cancel:hover {
     background-color: #e6761d;
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(255, 133, 27, 0.2);
+    transform: scale(1.04);
 }
 
 /* Media queries para responsividade */
@@ -97,9 +98,15 @@
         width: 90%;
         padding: 30px;
     }
-
+    .ufd-form {
+        grid-template-columns: 1fr; /* Stacks elements on small screens */
+    }
     .button-ufd-group {
         flex-direction: column;
         gap: 10px; 
+    }
+    .btn-ufd-register,
+    .btn-ufd-cancel {
+        margin: 5px 0; /* Adjust margin for stacked buttons */
     }
 }

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './Fornec.css'; 
 
 const initialFormState = {
-    fornec_emp: { id: 0 },
-    fornec_ufd: { id: 0 },
+    fornecEmp: { id: 0 },
+    fornecUfd: { id: 0 },
     razSoc: '',
     nomeFant: '',
     end: '',
@@ -16,30 +16,30 @@ const initialFormState = {
     cnpj: '',
     inscrMun: '',
     inscrEst: '',
-    telefone_1: '',
-    telefone_2: '', 
-    telefone_3:'',
-    email_1: '',
-    email_2: '',
-    email_3: '',
-    desc_1: '',
-    desc_2: '',
-    desc_3: '',
-    desc_4: '',
-    desc_5: '',
-    desc_6: '',
+    telefone1: '',
+    telefone2: '', 
+    telefone3:'',
+    email1: '',
+    email2: '',
+    email3: '',
+    desc1: '',
+    desc2: '',
+    desc3: '',
+    desc4: '',
+    desc5: '',
+    desc6: '',
     diferen: 0,
-    rep_1: 0,
-    rep_2: 0,
-    rep_3: 0,
-    rep_4: 0,
+    rep1: 0,
+    rep2: 0,
+    rep3: 0,
+    rep4: 0,
     obs: '',
-    plan_obs: '',
+    planObs: '',
     bloq: '',
-    crd_icms: '',
-    pc_cr_icms_1: 0,
-    pc_cr_icms_2: 0,
-    pc_cr_icms_3: 0
+    crdIcms: '',
+    pcCrIcms1: 0,
+    pcCrIcms2: 0,
+    pcCrIcms3: 0
 };
 
 function Fornec() {
@@ -76,7 +76,7 @@ function Fornec() {
         const idStore = store === 'store1' ? 1 : 2; 
         setObjFornec(prevState => ({
             ...prevState,
-            fornec_emp: { id: Number(idStore) }
+            fornecEmp: { id: Number(idStore) }
         }));
     }, []); 
 
@@ -94,7 +94,7 @@ function Fornec() {
         const { value } = e.target;
         setObjFornec(prevState => ({
             ...prevState,
-            fornec_ufd: { id: Number(value) }
+            fornecUfd: { id: Number(value) }
         }));
     };
 
@@ -110,7 +110,8 @@ function Fornec() {
                 body: JSON.stringify(objFornec)
             });
             if (response.ok) {
-                console.log("Fornecedor registrado com sucesso!");
+                alert("Fornecedor registrado com sucesso!");
+                window.location.reload();
                 setObjFornec(initialFormState);
             } else {
                 const errorText = await response.text();
@@ -122,6 +123,7 @@ function Fornec() {
     };
 
     const handleCancel = () => {
+        window.location.reload(); 
         setObjFornec(initialFormState);
     };
 
@@ -132,8 +134,8 @@ function Fornec() {
                 <form className="fornec1-form">       
                     <div className="fornec1-form-group">
                         <select
-                            name="fornec_ufd"
-                            value={objFornec.fornec_ufd.id} 
+                            name="fornecUfd"
+                            value={objFornec.fornecUfd.id} 
                             onChange={handleSelectChange} 
                             className="fornec1-form-control"
                         >
@@ -206,17 +208,17 @@ function Fornec() {
 
                     <div className="fornec1-form-group"> 
                         <input type="text"  onChange={handleChange} name="desc_6" placeholder="Descrição 6" className="fornec1-form-control" />
-                        <input type="text"  onChange={handleChange} name="diferen" placeholder="Diferencial" className="fornec1-form-control" />
+                        <input type="number"  onChange={handleChange} name="diferen" placeholder="Diferencial" className="fornec1-form-control" />
                     </div>
 
                     <div className="fornec1-form-group"> 
-                        <input type="text"  onChange={handleChange} name="rep_1" placeholder="rep 1" className="fornec1-form-control" />
-                        <input type="text"  onChange={handleChange} name="rep_2" placeholder="rep 2" className="fornec1-form-control" />
+                        <input type="number"  onChange={handleChange} name="rep_1" placeholder="rep 1" className="fornec1-form-control" />
+                        <input type="number"  onChange={handleChange} name="rep_2" placeholder="rep 2" className="fornec1-form-control" />
                     </div>
 
                     <div className="fornec1-form-group"> 
-                        <input type="text"  onChange={handleChange} name="rep_3" placeholder="rep 3" className="fornec1-form-control" />
-                        <input type="text"  onChange={handleChange} name="rep_4" placeholder="rep 4" className="fornec1-form-control" />
+                        <input type="number"  onChange={handleChange} name="rep_3" placeholder="rep 3" className="fornec1-form-control" />
+                        <input type="numberxt"  onChange={handleChange} name="rep_4" placeholder="rep 4" className="fornec1-form-control" />
                     </div>
                     
                     <div className="fornec1-form-group"> 

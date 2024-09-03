@@ -82,7 +82,7 @@ function Produto(){
                     onChange={handleChange}
                     value={objProd.obs}
                     name="Observação"
-                    className="produto-form-control"
+                    className="produto-form-control-obs"
                     placeholder="Observação" 
                 /> 
 

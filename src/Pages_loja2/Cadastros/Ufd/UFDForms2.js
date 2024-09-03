@@ -76,7 +76,6 @@ function UFDForms2() {
         <div className="ufd2-loja2">
             <div className='ufd2-content'></div>
                 <h1 className="ufd2-titulo">Registro de estado</h1>
-
                 <form className="ufd2-form" onSubmit={handleSubmit}> 
                     <br></br>
                     <input 
@@ -96,7 +95,7 @@ function UFDForms2() {
                         onChange={handleChange}
                     /> 
                     <input 
-                        type="text" 
+                        type="number" 
                         name="aliqIcms"
                         placeholder="Aliq_ICMS" 
                         className="ufd2-form-control" 
