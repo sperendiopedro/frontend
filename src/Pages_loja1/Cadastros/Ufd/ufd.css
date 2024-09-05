@@ -14,7 +14,7 @@
 
 .ufd-titulo {
     text-align: center;
-    font-size: 48px;
+    font-size: 45px;
     font-weight: bold;
     margin-bottom: 30px;
     color: #000000;
@@ -32,23 +32,24 @@
 
 .ufd-form-control {
     width: 100%;
-    padding: 12px; /* More padding for larger clickable area */
+    padding: 12px; 
     font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 8px; /* Softer border-radius */
+    border: 1px solid #3c3c3c8a;
+    border-radius: 8px; 
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
     background-color: #fff;
-    outline: none; /* Remove default focus outline */
+    outline: none; 
 }
 
 .ufd-form-control:focus {
-    border-color: #5366e5;
-    box-shadow: 0 0 10px rgba(83, 90, 229, 0.2); /* Smooth focus effect */
+    border-color: #1131ff;
+    box-shadow: 0 0 10px rgba(83, 90, 229, 0.2); 
 }
 
 .ufd-form-control::placeholder {
     color: #000000;
+    font-weight: bold;
 }
 
 .button-ufd-group {
@@ -56,7 +57,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .btn-ufd-register,

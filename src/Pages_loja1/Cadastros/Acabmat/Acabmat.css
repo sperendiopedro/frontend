@@ -1,0 +1,134 @@
+.acabmat-loja1 {
+    background-color: #f5f5f5; /* Lighter background for a cleaner look */
+    margin-top: 46px;
+    width: 80%;
+    max-width: 900px; /* Constrain the width on larger screens */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Softer, deeper shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.acabmat-titulo {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000000;
+    text-transform: uppercase; 
+    letter-spacing: 1.2px; 
+}
+
+.acabmat-form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Maior espaçamento para melhorar a leitura */
+}
+
+.acabmat-form-control {
+    width: 100%;
+    padding: 12px; /* More padding for larger clickable area */
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Softer border-radius */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    background-color: #fff;
+    outline: none; /* Remove default focus outline */
+}
+
+.acabmat-form-control-obs {
+    width: 100%;
+    padding: 12px; /* More padding for larger clickable area */
+    height: 200px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Softer border-radius */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    background-color: #fff;
+    outline: none; /* Remove default focus outline */
+}
+
+.acabmat-form-control:focus {
+    border-color: #5366e5;
+    box-shadow: 0 0 10px rgba(83, 90, 229, 0.2); /* Smooth focus effect */
+}
+
+.acabmat-form-control-obs:focus {
+    border-color: #5366e5;
+    box-shadow: 0 0 10px rgba(83, 90, 229, 0.2); /* Smooth focus effect */
+}
+
+.acabmat-form-control::placeholder {
+    color: #000000;
+}
+
+.acabmat-form-control-obs::placeholder {
+    color: #000000;
+}
+
+.button-acabmat-group {
+    grid-column: span 2; /* Makes the button group span both columns */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.btn-acabmat-register,
+.btn-acabmat-cancel {
+    flex: 1;
+    margin: 0 10px; /* Slightly larger margin between buttons */
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-acabmat-register {
+    background-color: #535ae5;
+    color: #fff;
+}
+
+.btn-acabmat-register:hover {
+    background-color: #4349d2;
+    transform: scale(1.04);
+}
+
+.btn-acabmat-cancel {
+    background-color: #ff851b;
+    color: #fff;
+}
+
+.btn-acabmat-cancel:hover {
+    background-color: #e6761d;
+    transform: scale(1.04);
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .acabmat-loja1 {
+        width: 90%;
+        padding: 30px;
+    }
+    .acabmat-form {
+        grid-template-columns: 1fr; /* Stacks elements on small screens */
+    }
+    .button-acabmat-group {
+        flex-direction: column;
+        gap: 10px; 
+    }
+    .btn-acabmat-register,
+    .btn-acabmat-cancel {
+        margin: 5px 0; /* Adjust margin for stacked buttons */
+    }
+}

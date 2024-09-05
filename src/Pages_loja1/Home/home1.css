@@ -1,26 +1,37 @@
 .home-loja1 {
-    background-color: #d0d1d4;
+    background-color: #f5f5f5; /* Lighter background for a cleaner look */
     margin-top: 46px;
-    width: 70%;
-    height: 100%;
+    width: 80%;
+    max-width: 900px; /* Constrain the width on larger screens */
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Softer, deeper shadow */
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: box-shadow 0.3s ease;
 }
 
+.home-loja1:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); /* Shadow effect on hover */
+}
 
-.container {
+.home-titulo-loja1 {
     text-align: center;
-    margin-top: 45px;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000000;
+    text-transform: uppercase; /* Adds emphasis */
+    letter-spacing: 1.2px; /* Slight spacing for readability */
 }
 
-.titulo-home{
-    font-size: 100px;
+.home-titulo2-loja1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #cf0000;
+    text-transform: uppercase; /* Adds emphasis */
+    letter-spacing: 1.2px; /* Slight spacing for readability */
 }

@@ -7,7 +7,7 @@ function UFDForms() {
         ufdEmp: { id: null },
         nome: '',
         sigla: '', 
-        aliqIcms: 0 
+        aliqIcms: ''
     });
 
 
@@ -24,7 +24,7 @@ function UFDForms() {
         const { name, value } = e.target;
         setObjUfd(prevState => ({
             ...prevState,
-            [name]: name === 'aliqIcms' ? Number(value) : value 
+            [name]: name === 'aliqIcms' ? (value === '' ? '' : Number(value)) : value
         }));
     };
 
@@ -78,8 +78,7 @@ function UFDForms() {
     return (
         <div className="ufd-loja1">
             <form className="ufd-form" onSubmit={handleSubmit}> 
-                <h1 className="ufd-titulo">Registro de estado</h1>
-                <br></br>
+                <h1 className="ufd-titulo">Cadastro de estados</h1>
                 <input 
                     type="text" 
                     name="nome"
@@ -98,8 +97,8 @@ function UFDForms() {
                 /> 
                 <input 
                     type="number" 
-                    name="aliqIcms"
-                    placeholder="Aliq_ICMS" 
+                    name="aliq_Icms"
+                    placeholder="Aliq ICMS" 
                     className="ufd-form-control" 
                     value={objUfd.aliqIcms}
                     onChange={handleChange}
