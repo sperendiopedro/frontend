@@ -1,25 +1,23 @@
 import { useState, useEffect } from "react";
 import "./ufd.css"; 
 
-
 function UFDForms() {
     const [objUfd, setObjUfd] = useState({
         ufdEmp: { id: null },
         nome: '',
         sigla: '', 
-        aliqIcms: ''
+        aliqIcms: 0
     });
-
 
     useEffect(() => {
         const store = localStorage.getItem('store');
-        const idStore = store==='store1' ? 1 : 2;  
+        const idStore = store === 'store1' ? 1 : 2;  
         setObjUfd(prevState => ({
             ...prevState,
             ufdEmp: { id: Number(idStore) } 
         }));
     }, []);
-    
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setObjUfd(prevState => ({
@@ -40,7 +38,7 @@ function UFDForms() {
                 },
                 body: JSON.stringify(objUfd)
             });
-    
+
             if (response.ok) {
                 alert('UFD registered successfully');
                 window.location.reload();
@@ -52,13 +50,8 @@ function UFDForms() {
                     aliqIcms: 0 
                 });
             } else {
-                const store = localStorage.getItem('store');
-                const idStore = store==='store1' ? 1 : 2;  
                 const errorText = await response.text(); 
-                console.error('Failed to register UFD:', errorText); 
-                console.log("teste", idStore); 
-
-                
+                console.error('Failed to register UFD:', errorText);
             }
         } catch (err) {
             console.error('An error occurred:', err); 
@@ -73,7 +66,6 @@ function UFDForms() {
             aliqIcms: 0 
         });
     };
-
 
     return (
         <div className="ufd-loja1">
@@ -97,7 +89,7 @@ function UFDForms() {
                 /> 
                 <input 
                     type="number" 
-                    name="aliq_Icms"
+                    name="aliqIcms"
                     placeholder="Aliq ICMS" 
                     className="ufd-form-control" 
                     value={objUfd.aliqIcms}
@@ -107,7 +99,7 @@ function UFDForms() {
                 <div className="button-ufd-group">
                     <input 
                         type="submit" 
-                        value="inserir"
+                        value="Inserir"
                         className="btn btn-ufd-register" 
                     /> 
         

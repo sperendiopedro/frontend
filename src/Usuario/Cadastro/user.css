@@ -1,11 +1,12 @@
 
 .classic-user {
     background-color: #f9f9f9;
-    width: 700px;
-    padding: 40px;
-    border-radius: 10px;
+    width: 400px;
+    padding: 20px;
+    border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     position: absolute;
+    gap: 10px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -14,16 +15,28 @@
     align-items: center;
 }
 
+.title-user {
+    font-size: 30px;
+    font-weight: bold;
+
+    color: #333; 
+}
+
 .form-control {
     width: 100%;
     max-width: 100%;
     padding: 12px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 20px;
     box-sizing: border-box;
     font-size: 16px;
 }
+
+.get-out{
+    font-size: 10px;
+}
+
 
 .button-user-group {
     display: flex;
@@ -39,7 +52,7 @@
     margin: 0 5px;
     padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     box-sizing: border-box;
     font-size: 16px;
     font-weight: 600;
@@ -65,10 +78,4 @@
 .btn-user-cancel:hover {
     background-color: #e6761d;
     transform: scale(1.05);
-}
-.title-user {
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #333; /* Força a cor a ser aplicada */
 }

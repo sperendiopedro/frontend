@@ -8,8 +8,10 @@ function UserForms() {
         setor: '',
         email: '',
         password: '',
-        userRole: ''
     });
+
+    const [confirmPassword, setConfirmPassword] = useState(''); // Estado para a confirmação de senha
+    const [errorMessage, setErrorMessage] = useState(''); // Estado para a mensagem de erro
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -19,15 +21,34 @@ function UserForms() {
         }));
     };
 
-    const handleSubmit = () => {
-        const { nome, setor, email, password} = objUser;
+    const handleConfirmPasswordChange = (e) => {
+        const value = e.target.value;
+        setConfirmPassword(value);
 
-        if (!nome || !setor || !email || !password) {
+        // Verifica se a senha e a confirmação de senha são diferentes
+        if (value !== objUser.password) {
+            setErrorMessage('As senhas não coincidem.');
+        } else {
+            setErrorMessage(''); // Limpa a mensagem de erro quando as senhas coincidem
+        }
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault(); 
+
+        const { nome, setor, email, password } = objUser;
+
+        if (!nome || !setor || !email || !password || !confirmPassword) {
             alert("Preencha todos os campos!");
             return; 
         }
 
-        fetch("http://localhost:8080/user/register", {
+        if (password !== confirmPassword) {
+            alert("As senhas não coincidem!");
+            return;
+        }
+
+        fetch("http://10.0.0.193:8080/user/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -43,8 +64,8 @@ function UserForms() {
                     email: '',
                     password: ''
                 });
+                setConfirmPassword(''); 
                 navigate("/login");
-
             } else {
                 alert("Erro ao salvar o usuário.");
             }
@@ -64,20 +85,21 @@ function UserForms() {
             email: '',
             password: ''
         });
+        setConfirmPassword(''); 
         navigate('/login');
-    };
+    }; 
 
     return (    
-        <form>
-            <div className='classic-user' onSubmit={handleSubmit}>
-                <h1 className="title-user">Registro de usuário:</h1>
+        <form onSubmit={handleSubmit}>
+            <div className='classic-user'>
+                <h1 className="title-user">Registrar</h1>
                 <br></br>
                 <input 
                     type="text" 
                     onChange={handleChange} 
                     name='nome' 
                     value={objUser.nome}
-                    placeholder="Nome" 
+                    placeholder="Nome completo" 
                     className="form-control"
                 /> 
                 <input 
@@ -93,9 +115,10 @@ function UserForms() {
                     onChange={handleChange} 
                     name='email' 
                     value={objUser.email}
-                    placeholder="Email" 
+                    placeholder="exemplo@email.com" 
                     className="form-control"
                 />
+
                 <input 
                     type="password" 
                     onChange={handleChange} 
@@ -104,12 +127,20 @@ function UserForms() {
                     placeholder="Senha" 
                     className="form-control"
                 />
+
+                <input 
+                    type="password" 
+                    onChange={handleConfirmPasswordChange} 
+                    value={confirmPassword}
+                    placeholder="Confirme a senha" 
+                    className="form-control"
+                />
+                {errorMessage && <p style={{color: 'red'}}>{errorMessage}</p>}
          
                 <div className="button-user-group">
                     <input 
                         type="submit" 
                         value="Inserir" 
-                        on
                         className="btn btn-user-register" 
                     /> 
         

@@ -1,4 +1,4 @@
-.classic-login {
+.login-div {
     background-color: #f9f9f9;
     width: 400px;
     padding: 40px;
@@ -13,39 +13,82 @@
     align-items: center;
 }
 
-.h1-login {
+
+   
+.login-title {
     font-size: 28px;
-    color: #333;
+    color: rgb(67, 67, 67);
+    font-weight: bold;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.login-subtitle {
+    font-size: 20px;
+    color:  rgba(48, 48, 48, 0.799);
+    font-weight: bold;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
-    text-align: center;
+    margin-right: 10px;
 }
 
-.form-control-login {
+.login-form-control {
     width: 100%;
     padding: 10px 15px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
-}
-
-.form-control-loja{
-    width: 100%;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 16px;
     color: #333;
     box-sizing: border-box; 
 }
 
-.form-control-login:focus {
-    border-color: #535ae5;
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.login-option-control{
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box; 
+}
+
+.login-form-control:focus {
+    border-color: #000452;
     outline: none;
     box-shadow: 0 0 5px rgba(83, 90, 229, 0.5);
+}
+
+.login-form-control::placeholder{
+    font-weight: bold;
+    opacity: 40%;
+}
+
+.login-password-recover{
+    text-decoration: none;
+    margin-right: 190px;
+    font-size: 12px;
+    color: #535ae5;
+    margin-bottom: 8px;
+
+}
+
+.login-password-recover:hover{
+    color: #333;
 }
 
 .btn-primary {
@@ -54,8 +97,9 @@
     background-color: #535ae5;
     color: #fff;
     border: none;
-    margin-right: 20px;
-    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -63,35 +107,30 @@
 }
 
 .btn-primary:hover {
-    background-color: #414abf;
+    background-color: #000443;
 }
 
 .teste {
     margin-top: 30px;
     text-align: center;
-    width: 100%; /* Ensure the container is full width */
+    width: 100%; 
 }
 
 .teste p {
-    margin: 0;
+    margin-right: 10px;
     font-size: 14px;
     color: #666;
+    margin-bottom: 2px;
 }
 
 .register {
+    margin-right: 10px;
     color: #535ae5;
     text-decoration: none;
     font-weight: bold;
-    margin-left: 5px;
     transition: color 0.3s ease;
 }
 
 .register:hover {
-    color: #414abf;
-}
-
-p.error {
-    color: #e74c3c;
-    font-size: 14px;
-    margin-bottom: 20px;
+    color: #333;
 }

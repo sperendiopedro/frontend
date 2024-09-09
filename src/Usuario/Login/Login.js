@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import "./Login.css";
 import { Link } from 'react-router-dom';
 
-//constante login handle
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -19,7 +18,7 @@ const Login = () => {
 
         const credentials = btoa(`${email}:${password}`);
         try {
-            const response = await fetch('http://localhost:8080/user/authenticate', {
+            const response = await fetch('http://10.0.0.193:8080/user/authenticate', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Basic ${credentials}`,
@@ -37,11 +36,10 @@ const Login = () => {
                 } else if (store === 'store2') {
                     navigate('/store2/home');
                 }
-                window.location.reload();
+                window.location.reload(); 
             } else {
                 const errorText = await response.text();
-                setError('Credenciais inválidas: ' + errorText);
-                console.error('Erro da resposta:', errorText);
+                setError('Credenciais invalidas: ' + errorText); 
             }
         } catch (err) {
             setError('Erro de autenticação!');
@@ -51,33 +49,37 @@ const Login = () => {
 
     const handleKeyDown = (e) => {
         if (e.key === 'Enter') {
-            e.preventDefault(); // Impede o comportamento padrão do Enter
+            e.preventDefault(); 
             handleLogin();
         }
     };
 
     return (
-        <div className='classic-login'>
-            <h1 className='h1-login'>Login</h1>
-            <br />
+        <div className='login-div'>
+            <h1 className='login-title'> Bem vindo(a)!</h1>
+            <h2 className='login-subtitle'>Entre para continuar </h2>
+            <br/>
             <input 
                 type="email" 
                 placeholder="Email" 
-                className='form-control-login'
+                className='login-form-control'
                 value={email} 
                 onChange={(e) => setEmail(e.target.value)} 
                 onKeyDown={handleKeyDown} 
             />
             <input 
                 type="password" 
-                className='form-control-login'
+                className='login-form-control'
                 placeholder="Senha" 
                 value={password} 
                 onChange={(e) => setPassword(e.target.value)} 
                 onKeyDown={handleKeyDown} 
             />
+
+            <Link className='login-password-recover' to='/user/password/recover'>Esqueceu sua senha?</Link>
+            
             <select 
-                className='form-control-loja' 
+                className='login-option-control' 
                 value={store} 
                 onChange={(e) => setStore(e.target.value)} 
                 onKeyDown={handleKeyDown} 
@@ -87,7 +89,9 @@ const Login = () => {
                 <option value="store2">Loja 2</option>
             </select>
                 
-            {error && <p>{error}</p>}
+            {error && <p className='error-message'>{error}</p>}
+            
+           
             <button onClick={handleLogin} className='btn btn-primary'>
                 Entrar
             </button>
