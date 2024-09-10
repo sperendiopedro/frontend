@@ -1,3 +1,2 @@
 ## SISTEMA DE INTERAÇÃO COM O USUARIO
 
-##KEY: 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
