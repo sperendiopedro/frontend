@@ -18,7 +18,7 @@ const Login = () => {
 
         const credentials = btoa(`${email}:${password}`);
         try {
-            const response = await fetch('http://10.0.0.193:8080/user/authenticate', {
+            const response = await fetch('https://localhost:8443/user/authenticate', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Basic ${credentials}`,

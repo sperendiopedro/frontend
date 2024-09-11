@@ -34,7 +34,7 @@ function EmpForms1() {
 
     const handleSubmit = () => {
         const token = localStorage.getItem('token');
-        fetch("http://localhost:8080/empresa/saveEmp", {
+        fetch("https://localhost:8443/empresa/saveEmp", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

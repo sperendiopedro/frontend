@@ -10,8 +10,8 @@ function UserForms() {
         password: '',
     });
 
-    const [confirmPassword, setConfirmPassword] = useState(''); // Estado para a confirmação de senha
-    const [errorMessage, setErrorMessage] = useState(''); // Estado para a mensagem de erro
+    const [confirmPassword, setConfirmPassword] = useState(''); 
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -25,11 +25,11 @@ function UserForms() {
         const value = e.target.value;
         setConfirmPassword(value);
 
-        // Verifica se a senha e a confirmação de senha são diferentes
+        
         if (value !== objUser.password) {
             setErrorMessage('As senhas não coincidem.');
         } else {
-            setErrorMessage(''); // Limpa a mensagem de erro quando as senhas coincidem
+            setErrorMessage(''); 
         }
     };
 
@@ -48,7 +48,7 @@ function UserForms() {
             return;
         }
 
-        fetch("http://10.0.0.193:8080/user/register", {
+        fetch("https://localhost:8443/user/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

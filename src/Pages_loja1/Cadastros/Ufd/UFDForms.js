@@ -30,7 +30,7 @@ function UFDForms() {
         e.preventDefault();
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch('http://localhost:8080/ufd/saveUfd', {
+            const response = await fetch('https://localhost:8443/ufd/saveUfd', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
