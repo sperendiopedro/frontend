@@ -1,29 +1,57 @@
-.home-loja2 {
-    background-color: #ffffff;
+.home2-div {
+    background-color: #f1f7ef; 
     margin-top: 46px;
-    width: 70%;
-    height: 100%;
+    width: 80%;
+    max-width: 900px; 
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); 
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: box-shadow 0.3s ease;
 }
 
-.container {
+
+.home2-titulo {
     text-align: center;
-    margin-top: 45px;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #cf0000;
+    text-transform: uppercase; 
+    letter-spacing: 1.2px; 
 }
 
-.title {
+.home2-subtitulo {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase; /* Adds emphasis */
+    letter-spacing: 1.2px; /* Slight spacing for readability */
+}
+
+.home2-emp-redirect{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.home2-emp-redirect p{
+    font-weight: 600;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.home2-emp-redirect-link{
+    font-size: 15px; 
     text-decoration: none;
-    font-size: 3.0rem;
-    color: #ffffff;
-    font-weight: bolder;
+    color: #0a5ffd;
 }
 
+.home2-emp-redirect-link:hover{
+    color: rgb(45, 45, 133)
+}

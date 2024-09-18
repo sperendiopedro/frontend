@@ -25,11 +25,11 @@ function Header(){
     return(
         <header className='header-one'>
             <Link className="logo" to="/store1/home"> Grego </Link>
-            <Link className="cadastros" to="/"> Orçamentos </Link>
-            <Link className="cadastros" to="/"> Nota Fiscal </Link>
-            <Link className="cadastros" to="/"> Boletos </Link>
-            <Link className="cadastros" to="/"> Mercadoria </Link>
-            <Link className="cadastros" to="/"> Moeda </Link>
+            <Link className="cadastros" to="/store1/home"> Orçamentos </Link>
+            <Link className="cadastros" to="/store1/home"> Nota Fiscal </Link>
+            <Link className="cadastros" to="/store1/home"> Boletos </Link>
+            <Link className="cadastros" to="/store1/home"> Mercadoria </Link>
+            <Link className="cadastros" to="/store1/home"> Moeda </Link>
            
            
         <div className="dropdown">

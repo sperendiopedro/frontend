@@ -1,37 +1,57 @@
-.home-loja1 {
-    background-color: #f5f5f5; /* Lighter background for a cleaner look */
+.home-div {
+    background-color: #f5f5f5; 
     margin-top: 46px;
     width: 80%;
-    max-width: 900px; /* Constrain the width on larger screens */
+    max-width: 900px; 
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Softer, deeper shadow */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); 
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: box-shadow 0.3s ease;
 }
 
-.home-loja1:hover {
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); /* Shadow effect on hover */
-}
 
-.home-titulo-loja1 {
-    text-align: center;
-    font-size: 35px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #000000;
-    text-transform: uppercase; /* Adds emphasis */
-    letter-spacing: 1.2px; /* Slight spacing for readability */
-}
-
-.home-titulo2-loja1 {
+.home-titulo {
     text-align: center;
     font-size: 35px;
     font-weight: bold;
     margin-bottom: 30px;
     color: #cf0000;
+    text-transform: uppercase; 
+    letter-spacing: 1.2px; 
+}
+
+.home-subtitulo {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #000000;
     text-transform: uppercase; /* Adds emphasis */
     letter-spacing: 1.2px; /* Slight spacing for readability */
+}
+
+.home-emp-redirect{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.home-emp-redirect p{
+    font-weight: 600;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.home-emp-redirect-link{
+    font-size: 15px; 
+    text-decoration: none;
+    color: #0a5ffd;
+}
+
+.home-emp-redirect-link:hover{
+    color: rgb(45, 45, 133)
 }

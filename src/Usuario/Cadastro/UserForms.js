@@ -1,6 +1,6 @@
 import "./user.css";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function UserForms() {
     const [objUser, setObjUser] = useState({
@@ -24,8 +24,6 @@ function UserForms() {
     const handleConfirmPasswordChange = (e) => {
         const value = e.target.value;
         setConfirmPassword(value);
-
-        
         if (value !== objUser.password) {
             setErrorMessage('As senhas não coincidem.');
         } else {
@@ -48,7 +46,7 @@ function UserForms() {
             return;
         }
 
-        fetch("https://localhost:8443/user/register", {
+        fetch("http://localhost:8443/user/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -73,26 +71,18 @@ function UserForms() {
         .catch(error => {
             console.error("Erro ao salvar o usuário:", error);
             alert("Erro ao salvar o usuário.");
+            window.location.reload();
         });
     };
 
     const navigate = useNavigate(); 
-    
-    const cancel = () => {
-        setObjUser({
-            nome: '', 
-            setor: '',
-            email: '',
-            password: ''
-        });
-        setConfirmPassword(''); 
-        navigate('/login');
-    }; 
+ 
 
     return (    
         <form onSubmit={handleSubmit}>
-            <div className='classic-user'>
-                <h1 className="title-user">Registrar</h1>
+            <div className="user-principal-div">
+                <h1 className="user-title">Registrar</h1>
+                <h2 className="user-subtitle"> Faça o registro para ter acesso à aplicação!</h2>
                 <br></br>
                 <input 
                     type="text" 
@@ -100,7 +90,7 @@ function UserForms() {
                     name='nome' 
                     value={objUser.nome}
                     placeholder="Nome completo" 
-                    className="form-control"
+                    className="user-form-control"
                 /> 
                 <input 
                     type="text" 
@@ -108,7 +98,7 @@ function UserForms() {
                     name='setor' 
                     value={objUser.setor}
                     placeholder="Setor" 
-                    className="form-control"
+                    className="user-form-control"
                 /> 
                 <input 
                     type="email" 
@@ -116,7 +106,7 @@ function UserForms() {
                     name='email' 
                     value={objUser.email}
                     placeholder="exemplo@email.com" 
-                    className="form-control"
+                    className="user-form-control"
                 />
 
                 <input 
@@ -125,7 +115,7 @@ function UserForms() {
                     name='password' 
                     value={objUser.password}
                     placeholder="Senha" 
-                    className="form-control"
+                    className="user-form-control"
                 />
 
                 <input 
@@ -133,24 +123,24 @@ function UserForms() {
                     onChange={handleConfirmPasswordChange} 
                     value={confirmPassword}
                     placeholder="Confirme a senha" 
-                    className="form-control"
+                    className="user-form-control"
                 />
-                {errorMessage && <p style={{color: 'red'}}>{errorMessage}</p>}
          
-                <div className="button-user-group">
-                    <input 
-                        type="submit" 
-                        value="Inserir" 
-                        className="btn btn-user-register" 
-                    /> 
-        
-                    <input 
-                        type="button" 
-                        value="Cancelar" 
-                        onClick={cancel}
-                        className="btn btn-user-cancel"
-                    />
+                {errorMessage && <p className="user-register-error">{errorMessage}</p>}
+         
+                <input 
+                type="submit" 
+                value="Inserir" 
+                className="btn user-btn-register" 
+                /> 
+
+                <div className="user-login-redirect">
+                    <p>Já possui uma conta? Faça</p>  
+                    <Link className='user-login-redirect-link' to="/login">Login</Link>
+
                 </div>
+    
+
             </div>
         </form>
     );

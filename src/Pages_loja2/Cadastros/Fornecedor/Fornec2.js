@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Fornec.css'; 
+import './Fornec2.css'; 
 
 const initialFormState = {
     fornec_emp: { id: 0 },

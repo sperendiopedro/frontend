@@ -18,7 +18,7 @@ const Login = () => {
 
         const credentials = btoa(`${email}:${password}`);
         try {
-            const response = await fetch('https://localhost:8443/user/authenticate', {
+            const response = await fetch('http://localhost:8443/user/authenticate', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Basic ${credentials}`,
@@ -38,8 +38,8 @@ const Login = () => {
                 }
                 window.location.reload(); 
             } else {
-                const errorText = await response.text();
-                setError('Credenciais invalidas: ' + errorText); 
+                alert('Credenciais inválidas '); 
+                window.location.reload();
             }
         } catch (err) {
             setError('Erro de autenticação!');
@@ -55,9 +55,9 @@ const Login = () => {
     };
 
     return (
-        <div className='login-div'>
-            <h1 className='login-title'> Bem vindo(a)!</h1>
-            <h2 className='login-subtitle'>Entre para continuar </h2>
+        <div className='login-principal-div'>
+            <h1 className='login-title'> Bem vindo(a)</h1>
+            <h2 className='login-subtitle'>Faça Login para continuar </h2>
             <br/>
             <input 
                 type="email" 
@@ -92,13 +92,13 @@ const Login = () => {
             {error && <p className='error-message'>{error}</p>}
             
            
-            <button onClick={handleLogin} className='btn btn-primary'>
+            <button onClick={handleLogin} className='-btn login-btn-primary'>
                 Entrar
             </button>
             
-            <div className='teste'> 
+            <div className='login-register-redirect'> 
                 <p>Não tem uma conta?</p>
-                <Link className='register' to="/user/register">Registrar</Link>
+                <Link className='login-register-link' to="/user/register">Registrar</Link>
             </div>
         </div>
     );

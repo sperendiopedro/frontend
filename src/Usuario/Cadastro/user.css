@@ -1,5 +1,5 @@
 
-.classic-user {
+.user-principal-div {
     background-color: #f9f9f9;
     width: 400px;
     padding: 20px;
@@ -15,14 +15,30 @@
     align-items: center;
 }
 
-.title-user {
-    font-size: 30px;
-    font-weight: bold;
-
-    color: #333; 
+.user-title {
+    font-size: 28px;
+    color: rgb(67, 67, 67);
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
 }
 
-.form-control {
+.user-subtitle{ 
+    font-size: 18px;
+    color: rgb(67, 67, 67);
+    font-weight: 300;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.user-form-control {
     width: 100%;
     max-width: 100%;
     padding: 12px;
@@ -33,21 +49,29 @@
     font-size: 16px;
 }
 
-.get-out{
-    font-size: 10px;
+.user-form-control:focus {
+    border-color: #000452;
+    outline: none;
+    box-shadow: 0 0 5px rgba(83, 90, 229, 0.5);
 }
 
+.user-form-control::placeholder{
+    font-weight: 600;
+    font-size: 13px;
+}
 
-.button-user-group {
+.user-register-error{
+    font-size: 15px;
+    color: red; 
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.user-btn-register {
     display: flex;
-    justify-content: space-between;
     width: 100%;
     max-width: 400px;
     margin-top: 20px;
-}
-
-.btn-user-register,
-.btn-user-cancel {
     flex: 1;
     margin: 0 5px;
     padding: 12px;
@@ -58,24 +82,38 @@
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-user-register {
     background-color: #535ae5;
     color: #fff;
 }
 
-.btn-user-register:hover {
-    background-color: #4349d2;
+.user-btn-register:hover {
+    background-color: #3940d6;
     transform: scale(1.05);
 }
 
-.btn-user-cancel {
-    background-color: #ff851b;
-    color: #fff;
+.user-login-redirect{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 15px;
 }
 
-.btn-user-cancel:hover {
-    background-color: #e6761d;
-    transform: scale(1.05);
+.user-login-redirect p{
+    color: black;
+    margin-right: 3px;
+    font-size: 15px;
+    font-weight: 200;
 }
+
+.user-login-redirect-link{
+    margin-right: 10px;
+    color: #535ae5;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-weight: 400;
+}
+
+
+
+

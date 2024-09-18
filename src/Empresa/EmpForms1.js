@@ -2,11 +2,10 @@ import { useState } from "react";
 import "./emp.css";
 
 function EmpForms1() {
-    
     const [objEmp, setObjEmp] = useState({
         razSoc: '',
         nomeFant: '',
-        end: '',
+        endereco: '',
         bairro: '',
         cep: '',
         cnpj: '',
@@ -32,9 +31,17 @@ function EmpForms1() {
         }));
     };
 
-    const handleSubmit = () => {
-        const token = localStorage.getItem('token');
-        fetch("https://localhost:8443/empresa/saveEmp", {
+    const handleSubmit = (e) => {
+        e.preventDefault(); 
+       const { razSoc, nomeFant, endereco, bairro, cep, cnpj, inscrMun, inscrEst, telefone, email, relSoc, nrCupom, obs} = objEmp; 
+
+       if(!razSoc || !nomeFant || !endereco || !bairro || !cep || !cnpj || !inscrMun || !inscrEst || !telefone || !email || !relSoc || !nrCupom || !obs ) {
+         alert("Preencha todos os campos!"); 
+         return; 
+       }
+        
+       const token = localStorage.getItem('token');
+        fetch("http://localhost:8443/empresa/saveEmp", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -45,7 +52,7 @@ function EmpForms1() {
         .then(response => {
             if (response.ok) {
                 alert("Empresa salva com sucesso!");
-                resetForm();
+                cancel(); 
             } else {
                 alert("Erro ao salvar empresa");
             }
@@ -57,10 +64,7 @@ function EmpForms1() {
     };
 
     const cancel = () => {
-        resetForm();
-    };
-
-    const resetForm = () => {
+        window.location.reload(); 
         setObjEmp({
             razSoc: '',
             nomeFant: '',
@@ -78,19 +82,19 @@ function EmpForms1() {
         });
     };
 
+ 
     return (
-        <div className="emp">
-            <div className="emp-content">
-                <form className="emp-form">
-                <h1>Registro de empresa </h1>
-                <br></br>
+        <div className="emp-principal-div">
+            <h1 className="emp-titulo"> Registro de empresa </h1>
+            <br></br>
+            <form className="emp-form">  
                     <input
                         type="text"
                         name="razSoc"
                         onChange={handleChange}
                         value={objEmp.razSoc}
                         placeholder="Razão social"
-                        className="form-control"
+                        className="emp-form-control"
                     />
                     <input
                         type="text"
@@ -98,7 +102,7 @@ function EmpForms1() {
                         onChange={handleChange}
                         value={objEmp.nomeFant}
                         placeholder="Nome Fantasia"
-                        className="form-control"
+                        className="emp-form-control"
                     />
                     <input
                         type="text"
@@ -106,7 +110,7 @@ function EmpForms1() {
                         onChange={handleChange}
                         value={objEmp.end}
                         placeholder="Endereço"
-                        className="form-control"
+                        className="emp-form-control"
                     />
                     <input
                         type="text"
@@ -114,7 +118,7 @@ function EmpForms1() {
                         onChange={handleChange}
                         value={objEmp.bairro}
                         placeholder="Bairro"
-                        className="form-control"
+                        className="emp-form-control"
                     />
                     <input
                         type="text"
@@ -122,7 +126,7 @@ function EmpForms1() {
                         onChange={handleChange}
                         value={objEmp.cep}
                         placeholder="CEP"
-                        className="form-control"
+                        className="emp-form-control"
                     />
                     <input
                         type="text"
@@ -130,7 +134,7 @@ function EmpForms1() {
                         onChange={handleChange}
                         value={objEmp.cnpj}
                         placeholder="CNPJ"
-                        className="form-control"
+                        className="emp-form-control"
                     />
                     <input
                         type="text"
@@ -138,7 +142,7 @@ function EmpForms1() {
                         onChange={handleChange}
                         value={objEmp.inscrMun}
                         placeholder="Inscrição municipal"
-                        className="form-control"
+                        className="emp-form-control"
                     />
                     <input
                         type="text"
@@ -146,7 +150,7 @@ function EmpForms1() {
                         onChange={handleChange}
                         value={objEmp.inscrEst}
                         placeholder="Inscrição estadual"
-                        className="form-control"
+                        className="emp-form-control"
                     />
                     <input
                         type="text"
@@ -154,7 +158,7 @@ function EmpForms1() {
                         onChange={handleChange}
                         value={objEmp.telefone}
                         placeholder="Telefone"
-                        className="form-control"
+                        className="emp-form-control"
                     />
                     <input
                         type="text"
@@ -162,7 +166,7 @@ function EmpForms1() {
                         onChange={handleChange}
                         value={objEmp.email}
                         placeholder="Email"
-                        className="form-control"
+                        className="emp-form-control"
                     />
                     <input
                         type="number"
@@ -170,7 +174,7 @@ function EmpForms1() {
                         onChange={handleChange}
                         value={objEmp.relSoc}
                         placeholder="Relação social"
-                        className="form-control"
+                        className="emp-form-control"
                     />
                     <input
                         type="number"
@@ -178,16 +182,19 @@ function EmpForms1() {
                         onChange={handleChange}
                         value={objEmp.nrCupom}
                         placeholder="Número Cupom"
-                        className="form-control"
-                    />
+                        className="emp-form-control"
+                    />     
+            </form>    
                     <input
                         type="text"
                         name="obs"
                         onChange={handleChange}
                         value={objEmp.obs}
                         placeholder="Observações"
-                        className="form-control"
+                        className="emp-form-control-obs"
                     />
+                 
+                 
                     <div className="button-emp-group">
                         <input
                             type="button"
@@ -202,8 +209,7 @@ function EmpForms1() {
                             onClick={cancel}
                         />
                     </div>
-                </form>
-            </div>
+
         </div>
     );
 }
