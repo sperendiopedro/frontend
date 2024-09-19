@@ -14,6 +14,7 @@ import EmpForms1 from "./Empresa/EmpForms1";
 import Familia from "./Pages_loja1/Cadastros/Familia/Familia";
 import Produto from "./Pages_loja1/Cadastros/Produto/Produto";
 import Acabmat from "./Pages_loja1/Cadastros/Acabmat/Acabmat";
+import Cor from "./Pages_loja1/Cadastros/Cor/Cor";
 
 
 
@@ -36,6 +37,7 @@ function RoutesApp() {
         <Route path="/store1/familia/register" element={<PrivateRoute element={<Familia />} />} />
         <Route path="/store1/produto/register" element={<PrivateRoute element={<Produto />} />} />
         <Route path="/store1/acabmat/register" element={<PrivateRoute element={<Acabmat />} />} />
+        <Route path="/store1/cor/register" element={<PrivateRoute element={<Cor />} />} />
         <Route path="/store2/ufd/register" element={<PrivateRoute element={<UFDForms2 />} />} />
         <Route path="/store2/home" element={<PrivateRoute element={<Home2 />} />} />
         <Route path="/store2/fornec/register" element={<PrivateRoute element={<Fornec2 />} />} />

@@ -65,42 +65,46 @@ function Produto(){
     }
     
     return (
-        <div className="produto-loja1">
-            <form className="produto-form" onSubmit={handleSubmit} > 
-                <h1 className="produto-titulo">Registro de produto</h1>
-                <br></br>
-                <input 
-                    type="text" 
-                    onChange={handleChange}
-                    value={objProd.descr}
-                    name="descr"
-                    placeholder="Descrição" 
-                    className="produto-form-control"
-                /> 
-                 <input 
-                    type="text" 
-                    onChange={handleChange}
-                    value={objProd.obs}
-                    name="Observação"
-                    className="produto-form-control-obs"
-                    placeholder="Observação" 
-                /> 
+        <div className="produto-principal-div">
+            <h1 className="produto-titulo">Registro de produto</h1>
+            <form className="produto-form"> 
+                <div className="produto-form-group">
+                    <label className="produto-label"> Descrição: </label>
+                    <input 
+                        type="text" 
+                        onChange={handleChange}
+                        value={objProd.descr}
+                        name="descr"
+                        className="produto-form-control"
+                    />
+                </div>
+                <div className="produto-form-group">
+                    <label className="produto-label">Observação</label>
+                    <input 
+                        type="text" 
+                        onChange={handleChange}
+                        value={objProd.obs}
+                        name="Observação"
+                        className="produto-form-control-obs"
+                    /> 
+                </div>
+            </form>
 
-                <div className="button-familia-group">
+                <div className="produto-button-group">
                     <input 
                         type="submit" 
+                        onClick={handleSubmit}
                         value="inserir"
-                        className="btn btn-produto-register" 
+                        className="btn produto-btn-register" 
                     /> 
         
                     <input 
                         type="button"
                         onClick={handleCancel}
                         value="Cancelar"
-                        className="btn btn-produto-cancel"
+                        className="btn produto-btn-cancel"
                     />
                 </div>
-            </form>
         </div>
     );
 }

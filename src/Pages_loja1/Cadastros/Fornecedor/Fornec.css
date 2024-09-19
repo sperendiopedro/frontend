@@ -1,54 +1,83 @@
 .fornec-principal-div {
-    background-color: #f5f5f5; 
-    margin-top: 35px;
-    width: 80%;
-    max-width: 900px; 
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); 
+    background-color: #f9f9f9;
+    margin-top: 500px;
+    width: 800px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    gap: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: box-shadow 0.3s ease;
-}
-
-.fornec-principal-div:hover {
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); 
 }
 
 .fornec-titulo {
     text-align: center;
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #000000;
-    text-transform: uppercase; 
-    letter-spacing: 1.2px; 
-}
-
-.fornec-form-group {
-    display: contents;
+    font-size: 45px;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
 }
 
 .fornec-form {
     width: 100%;
-    display: grid;
+    display: grid; 
     grid-template-columns: 1fr 1fr; 
-    gap: 20px;
+    gap: 5px;
+    margin-left: 35px;
+    margin-bottom: 1px;
+}
+
+
+.fornec-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.fornec-label{
+    color: #3f3f3f;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
 }
 
 .fornec-form-control{
-    width: 100%;
-    padding: 12px; 
-    font-size: 16px;
-    border: 1px solid #b2b2b2;
-    border-radius: 8px; 
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
     box-sizing: border-box;
-    background-color: #fff;
-    outline: none; 
+    font-size: 16px;
 }
 
+.fornec-form-control-select{
+    margin-top: 22px;
+    width: 300px;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.fornec-form-control-obs{
+    width: 700px;
+    height: 70px;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
 
 .fornec-form-control:focus {
     border-color: #1131ff;
@@ -65,7 +94,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .fornec-btn-register,

@@ -65,43 +65,46 @@ function Familia(){
     }
     
     return (
-        <div className="familia-loja1">
-            <form className="familia-form" onSubmit={handleSubmit} > 
-                <h1 className="familia-titulo">Registro de familia</h1>
-                <br></br>
-                <input 
-                    type="text" 
-                    onChange={handleChange}
-                    value={objFam.descr}
-                    name="descr"
-                    placeholder="Descrição" 
-                    className="familia-form-control"
-                /> 
-                 <input 
-                    type="text" 
-                    onChange={handleChange}
-                    value={objFam.obs}
-                    name="obs"
-                    placeholder="Observação" 
-                    className="familia-form-control-obs"
-                /> 
-             
+        <div className="familia-principal-div">
+            <h1 className="familia-titulo">Registro de familia</h1>
+            <form className="familia-form" onSubmit={handleSubmit}>
+                <div className="familia-form-group"> 
+                    <label className="familia-label"> Descrição: </label>
+                    <input 
+                        type="text" 
+                        onChange={handleChange}
+                        value={objFam.descr}
+                        name="descr" 
+                        className="familia-form-control"
+                    /> 
+                </div>
+                <div className="familia-form-group">    
+                    <label className="familia-label"> Observação: </label>
+                    <input 
+                        type="text" 
+                        onChange={handleChange}
+                        value={objFam.obs}
+                        name="obs"
+                        className="familia-form-control-obs"
+                    /> 
+                </div>
+            </form>             
 
-                <div className="button-familia-group">
+                <div className="familia-button-group">
                     <input 
                         type="submit" 
                         value="inserir"
-                        className="btn btn-familia-register" 
+                        className="btn familia-btn-register" 
                     /> 
         
                     <input 
                         type="button"
                         onClick={handleCancel}
                         value="Cancelar"
-                        className="btn btn-familia-cancel"
+                        className="btn familia-btn-cancel"
                     />
                 </div>
-            </form>
+
         </div>
     );
 }

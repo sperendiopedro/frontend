@@ -29,7 +29,7 @@ function Acabmat(){
         e.preventDefault(); 
         const token = localStorage.getItem('token'); 
         try{
-            const response = await fetch('http://localhost:8080/acabmat/register', {
+            const response = await fetch('http://localhost:8443/acabmat/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -65,43 +65,49 @@ function Acabmat(){
     }
     
     return (
-        <div className="acabmat-loja1">
-            <form className="acabmat-form" onSubmit={handleSubmit} > 
-                <h1 className="acabmat-titulo">Registro de acabmat</h1>
-                <br></br>
-                <input 
-                    type="text" 
-                    onChange={handleChange}
-                    value={objAcabmat.descr}
-                    name="descr"
-                    placeholder="Descrição" 
-                    className="acabmat-form-control"
-                /> 
-                 <input
-                    type="text"
-                    onChange={handleChange}
-                    value={objAcabmat.obs}
-                    name="obs"
-                    placeholder="Observações"
-                    className="acabmat-form-control-obs"
-        
-                 />
-
-                <div className="button-familia-group">
+        <div className="acabmat-principal-div">
+            <h1 className="acabmat-titulo">Registro de acabmat</h1>
+            <form className="acabmat-form"> 
+                
+                <div className="acabmat-form-group">
+                    <label className="acabmat-label"> Descrição: </label>
                     <input 
-                        type="submit" 
-                        value="inserir"
-                        className="btn btn-acabmat-register" 
+                        type="text" 
+                        onChange={handleChange}
+                        value={objAcabmat.descr}
+                        name="descr"
+                        className="acabmat-form-control"
                     /> 
-        
-                    <input 
-                        type="button"
-                        onClick={handleCancel}
-                        value="Cancelar"
-                        className="btn btn-acabmat-cancel"
+                </div> 
+
+                <div className="acabmat-form-group">  
+                    <label className="acabmat-label">Observação: </label>
+                    <input
+                        type="text"
+                        onChange={handleChange}
+                        value={objAcabmat.obs}
+                        name="obs"
+                        className="acabmat-form-control-obs"
                     />
-                </div>
-            </form>
+                </div>    
+            </form>    
+            
+            <div className="acabmat-button-group">
+                <input 
+                    onClick={handleSubmit}
+                    type="submit" 
+                    value="inserir"
+                    className="btn acabmat-btn-register" 
+                /> 
+    
+                <input 
+                    type="button"
+                    onClick={handleCancel}
+                    value="Cancelar"
+                    className="btn acabmat-btn-cancel"
+                />
+            </div>
+        
         </div>
     );
 }

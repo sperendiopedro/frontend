@@ -1,0 +1,142 @@
+.cor-principal-div {
+    background-color: #f9f9f9;
+    width: 800px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    gap: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cor-titulo {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.cor-form {
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px;
+}
+
+.cor-form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.cor-label{
+    color: #3f3f3f;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.cor-form-control {
+    width: 500px;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.cor-form-control-obs {
+    width: 500px;
+    height: 100px;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.cor-form-control:focus {
+    border-color: #535ae5;
+    box-shadow: 0 0 8px rgba(83, 90, 229, 0.2);
+    outline: none;
+}
+
+.cor-form-control-obs:focus {
+    border-color: #535ae5;
+    box-shadow: 0 0 8px rgba(83, 90, 229, 0.2);
+    outline: none;
+}
+
+
+.cor-button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.cor-btn-register,
+.cor-btn-cancel {
+    flex: 1;
+    margin: 0 5px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cor-btn-register {
+    background-color: #535ae5;
+    color: #fff;
+    margin-right: 40px;
+}
+
+.cor-btn-register:hover {
+    background-color: #4349d2;
+    transform: scale(1.05);
+}
+
+.cor-btn-cancel {
+    background-color: #ff851b;
+    color: #fff;
+}
+
+.cor-btn-cancel:hover {
+    background-color: #e6761d;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 133, 27, 0.2);
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .cor-loja1 {
+        width: 90%;
+        padding: 30px;
+    }
+    .cor-form {
+        grid-template-columns: 1fr; /* Stacks elements on small screens */
+    }
+    .button-cor-group {
+        flex-direction: column;
+        gap: 10px; 
+    }
+    .btn-cor-register,
+    .btn-cor-cancel {
+        margin: 5px 0; /* Adjust margin for stacked buttons */
+    }
+}
