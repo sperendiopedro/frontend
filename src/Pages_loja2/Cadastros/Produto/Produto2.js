@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import "./Familia.css"
+import { useState, useEffect } from "react";
+import "./Produto2.css"
 
-function Familia(){
-
-    const[objFam, setObjFam] = useState({
-        famEmp: {id: null},
+function Produto2(){
+   
+    const[objProd, setObjProd] = useState({
+        prodEmp: {id: null},
         descr: '',
         obs: ''
     });
@@ -12,15 +12,15 @@ function Familia(){
     useEffect( () => {
         const store = localStorage.getItem('store'); 
         const idStore = store === 'store1' ? 1 : 2;
-        setObjFam(prevState => ({
+        setObjProd(prevState => ({
             ...prevState,
-            famEmp:{id: Number(idStore)}
+            prodEmp:{id: Number(idStore)}
         }));
     }, []);
 
     const handleChange = (e) => {
         const{ name, value } = e.target;
-        setObjFam(prevState => ({
+        setObjProd(prevState => ({
             ...prevState,
                 [name] : value
         }));
@@ -30,20 +30,20 @@ function Familia(){
         e.preventDefault(); 
         const token = localStorage.getItem('token'); 
         try{
-            const response = await fetch('http://localhost:8443/familia/register', {
+            const response = await fetch('http://localhost:8443/produto/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     "Authorization": `Bearer ${token}`
                 },
-                body: JSON.stringify(objFam)
+                body: JSON.stringify(objProd)
             });
 
             if ( response.ok ) {
-                alert('Objeto empresa cadastrado com sucesso!');
+                alert('Produto registrado com sucesso!');
                 window.location.reload();
-                setObjFam({
-                    famEmp:{id: Number(localStorage.getItem('idStore'))},
+                setObjProd({
+                    prodEmp:{id: Number(localStorage.getItem('idStore'))},
                     descr:'', 
                     obs:''
                 })
@@ -57,57 +57,55 @@ function Familia(){
     }
 
     const handleCancel = () =>{
-        setObjFam({
-            famEmp:{id: Number(localStorage.getItem('idStore'))},
+        setObjProd({
+            prodEmp:{id: Number(localStorage.getItem('idStore'))},
             descr:'',
             obs:''
         })
     }
     
     return (
-        <div className="familia-principal-div">
-            <h1 className="familia-titulo">Registro de familia</h1>
-            <form className="familia-form" onSubmit={handleSubmit}>
-                <div className="familia-form-group"> 
-                    <label className="familia-label"> Descrição: </label>
+        <div className="produto2-principal-div">
+            <h1 className="produto2-titulo">Registro de produto</h1>
+            <form className="produto2-form"> 
+                <div className="produto2-form-group">
+                    <label className="produto2-label"> Descrição: </label>
                     <input 
                         type="text" 
                         onChange={handleChange}
-                        value={objFam.descr}
-                        name="descr" 
-                        className="familia-form-control"
-                    /> 
+                        value={objProd.descr}
+                        name="descr"
+                        className="produto2-form-control"
+                    />
                 </div>
-                <div className="familia-form-group">    
-                    <label className="familia-label"> Observação: </label>
+                <div className="produto-form-group">
+                    <label className="produto2-label">Observação</label>
                     <input 
                         type="text" 
                         onChange={handleChange}
-                        value={objFam.obs}
+                        value={objProd.obs}
                         name="obs"
-                        className="familia-form-control-obs"
-                    /> 
+                        className="produto2-form-control-obs"
+                    />
                 </div>
-            </form>             
+            </form>
 
-                <div className="familia-button-group">
+                <div className="produto2-button-group">
                     <input 
                         type="submit" 
-                        value="inserir"
                         onClick={handleSubmit}
-                        className="btn familia-btn-register" 
+                        value="inserir"
+                        className="btn produto2-btn-register" 
                     /> 
         
                     <input 
                         type="button"
                         onClick={handleCancel}
                         value="Cancelar"
-                        className="btn familia-btn-cancel"
+                        className="btn produto2-btn-cancel"
                     />
                 </div>
-
         </div>
     );
 }
-
-export default Familia; 
+export default Produto2; 

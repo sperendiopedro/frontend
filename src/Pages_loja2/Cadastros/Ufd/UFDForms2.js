@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./UFD2.css"; 
+import "./Ufd2.css"; 
 
 function UFDForms2() {
     const [objUfd, setObjUfd] = useState({
@@ -31,7 +31,7 @@ function UFDForms2() {
         e.preventDefault();
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch('https://localhost:8443/ufd/saveUfd', {
+            const response = await fetch('http://localhost:8443/ufd/saveUfd', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -73,51 +73,59 @@ function UFDForms2() {
 
 
     return (
-        <div className="ufd2-loja2">
-            <div className='ufd2-content'></div>
+        <div className="ufd2-principal-div">
                 <h1 className="ufd2-titulo">Registro de estado</h1>
-                <form className="ufd2-form" onSubmit={handleSubmit}> 
-                    <br></br>
-                    <input 
-                        type="text" 
-                        name="nome"
-                        placeholder="Nome do Estado" 
-                        className="ufd2-form-control" 
-                        value={objUfd.nome}
-                        onChange={handleChange}
-                    /> 
-                    <input 
-                        type="text" 
-                        name="sigla"
-                        placeholder="Sigla" 
-                        className="ufd2-form-control" 
-                        value={objUfd.sigla}
-                        onChange={handleChange}
-                    /> 
-                    <input 
-                        type="number" 
-                        name="aliqIcms"
-                        placeholder="Aliq_ICMS" 
-                        className="ufd2-form-control" 
-                        value={objUfd.aliqIcms}
-                        onChange={handleChange}
-                    /> 
-        
-                    <div className="button-ufd2-group">
+                <form className="ufd2-form"> 
+                   <div className="ufd2-form-group">
+                        <label className="ufd2-label">Nome do estado: </label>
+                        <input 
+                            type="text" 
+                            name="nome"
+                            className="ufd2-form-control" 
+                            value={objUfd.nome}
+                            onChange={handleChange}
+                        /> 
+                    </div>
+                    
+                    <div className="ufd2-form-group"> 
+                        <label className="ufd2-label">Sigla:</label>
+                        <input 
+                            type="text" 
+                            name="sigla"
+                            className="ufd2-form-control" 
+                            value={objUfd.sigla}
+                            onChange={handleChange}
+                        /> 
+                    </div>
+                    
+                    <div className="ufd2-form-group"> 
+                    <label className="ufd2-label">Aliquota ICMS:</label>
+                        <input 
+                            type="number" 
+                            name="aliqIcms"
+                            className="ufd2-form-control" 
+                            value={objUfd.aliqIcms}
+                            onChange={handleChange}
+                        /> 
+                    </div>
+                </form>     
+                    
+                    <div className="ufd2-button-group">
+                        
                         <input 
                             type="submit" 
                             value="inserir"
-                            className="btn btn-ufd2-register" 
+                            onClick={handleSubmit}
+                            className="btn ufd2-btn-register" 
                         /> 
             
                         <input 
                             type="button"
                             value="Cancelar"
                             onClick={handleCancel}
-                            className="btn btn-ufd2-cancel"
+                            className="btn ufd2-btn-cancel"
                         />
                     </div>
-                </form>
         </div>
     );
 }

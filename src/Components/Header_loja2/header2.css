@@ -79,6 +79,7 @@
 
 .SignOut-other {
     background-color: transparent;
+    text-decoration: none;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -89,5 +90,5 @@
 
 .SignOut-other:hover {
     text-decoration: none;
-    color: #f00;
+    color: rgb(221, 0, 0);
 }

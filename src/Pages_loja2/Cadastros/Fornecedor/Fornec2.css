@@ -1,81 +1,103 @@
-.fornec2{
-    background-color: #effef3; /* Lighter background for a cleaner look */
-    margin-top: 46px;
-    width: 80%;
-    max-width: 900px; /* Constrain the width on larger screens */
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Softer, deeper shadow */
+.fornec2-principal-div{
+    background-color: #ebe7e7;
+    margin-top: 500px;
+    width: 800px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    gap: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: box-shadow 0.3s ease;
-}
-
-.fornec2:hover {
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); /* Shadow effect on hover */
 }
 
 .fornec2-titulo {
     text-align: center;
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #000000;
-    text-transform: uppercase; /* Adds emphasis */
-    letter-spacing: 1.2px; /* Slight spacing for readability */
-}
-
-.fornec2-content {
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
+    font-size: 45px;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
 }
 
 .fornec2-form {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 20px; /* Increased gap for more breathing room */
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 5px;
+    margin-left: 35px;
+    margin-bottom: 1px;
 }
 
 .fornec2-form-group {
-    display: contents; /* Ensures elements stay in grid layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.fornec2-label{
+    color: #3f3f3f;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
 }
 
 .fornec2-form-control {
-    width: 100%;
-    padding: 12px; /* More padding for larger clickable area */
-    font-size: 16px;
-    border: 1px solid #b2b2b2;
-    border-radius: 8px; /* Softer border-radius */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
     box-sizing: border-box;
-    background-color: #fff;
-    outline: none; /* Remove default focus outline */
+    font-size: 16px;
+}
+
+.fornec2-form-control-select{
+    margin-top: 22px;
+    width: 300px;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.fornec2-form-control-obs{
+    width: 700px;
+    height: 70px;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
 }
 
 .fornec2-form-control:focus {
-    border-color:   #004c08;
-    box-shadow: 0 0 10px rgba(83, 90, 229, 0.2); /* Smooth focus effect */
+    border-color: #11ff6c;
+    box-shadow: 0 0 8px rgba(83, 90, 229, 0.2);
+    outline: none;
 }
 
-.fornec2-form-control::placeholder {
-    color: #000000;
-}
+
 
 .fornec2-button-group {
-    grid-column: span 2; /* Makes the button group span both columns */
+    grid-column: span 2; 
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 .fornec2-btn-register,
 .fornec2-btn-cancel {
     flex: 1;
-    margin: 0 10px; /* Slightly larger margin between buttons */
+    margin: 0 10px; 
     padding: 14px 24px;
     border: none;
     border-radius: 8px;

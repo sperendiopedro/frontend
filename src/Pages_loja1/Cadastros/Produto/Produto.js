@@ -30,7 +30,7 @@ function Produto(){
         e.preventDefault(); 
         const token = localStorage.getItem('token'); 
         try{
-            const response = await fetch('http://localhost:8080/produto/register', {
+            const response = await fetch('http://localhost:8443/produto/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -84,9 +84,9 @@ function Produto(){
                         type="text" 
                         onChange={handleChange}
                         value={objProd.obs}
-                        name="Observação"
+                        name="obs"
                         className="produto-form-control-obs"
-                    /> 
+                    />
                 </div>
             </form>
 

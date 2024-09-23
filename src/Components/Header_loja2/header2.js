@@ -25,28 +25,28 @@ function Header2(){
     return(
         <header className='header-other'>
             <Link className="logo" to="/store2/home"> GR2 </Link>
-            <Link className="cadastros" to="/"> Orçamentos </Link>
-            <Link className="cadastros" to="/"> Nota Fiscal </Link>
-            <Link className="cadastros" to="/"> Boletos </Link>
-            <Link className="cadastros" to="/"> Mercadoria </Link>
-            <Link className="cadastros" to="/"> Moeda </Link>
+            <Link className="cadastros" to="/store2/home"> Orçamentos </Link>
+            <Link className="cadastros" to="/store2/home"> Nota Fiscal </Link>
+            <Link className="cadastros" to="/store2/home"> Boletos </Link>
+            <Link className="cadastros" to="/store2/home"> Mercadoria </Link>
+            <Link className="cadastros" to="/store2/home"> Moeda </Link>
            
            
         <div className="dropdown-other">
             <div className="dropdown-toggle-other">Cadastros gerais</div>
             <div className="dropdown-menu-other">
-                <Link className="dropdown-item-other" to="store2/ufd/register">Registro de Estado</Link>
-                <Link className="dropdown-item-other" to="store2/fornec/register">Registro de fornecedor</Link>
-                <Link className="dropdown-item" to="/store2/familia/register">Registro de familia</Link>
-                <Link className="dropdown-item" to="/store2/produto/register">Registro de produto</Link>
-                <Link className="dropdown-item" to="/store2/acabmat/register">Registro de acabmat* </Link>
-                <Link className="dropdown-item" to="/store2/cor/register">Registro de cor</Link>
+                <Link className="dropdown-item-other" to="store2/ufd/register">Estado</Link>
+                <Link className="dropdown-item-other" to="store2/fornec/register">Fornecedor</Link>
+                <Link className="dropdown-item" to="/store2/familia/register">Familia</Link>
+                <Link className="dropdown-item" to="/store2/produto/register">Produto</Link>
+                <Link className="dropdown-item" to="/store2/acabmat/register">Acabmat* </Link>
+                <Link className="dropdown-item" to="/store2/cor/register">Cor</Link>
             </div>
         </div>
            
-            <div className='auth'>
-                <button className='SignOut-other' onClick={handleLogout}>Sair</button>
-            </div> 
+           
+                <button className='SignOut' onClick={handleLogout}>Sair</button>
+           
         
         </header>
     )

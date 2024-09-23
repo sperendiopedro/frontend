@@ -6,7 +6,7 @@ const initialFormState = {
     fornecUfd: { id: 0 },
     razSoc: '',
     nomeFant: '',
-    endereco: '',
+    end: '',
     bairro: '',
     cep: '',
     municipio: '',
@@ -52,7 +52,7 @@ function Fornec() {
         const store = localStorage.getItem('store'); 
         const idStore = store === 'store1' ? 1 : 2; 
         
-        fetch(`http://localhost:8080/ufd/listByEmp/${idStore}`, {
+        fetch(`http://localhost:8443/ufd/listByEmp/${idStore}`, {
             method: 'GET', 
             headers: {
                 'Authorization': `Bearer ${token}`, 
@@ -101,7 +101,7 @@ function Fornec() {
     const handleSubmit = async (e) => {
         e.preventDefault(); 
         try {
-            const response = await fetch('http://localhost:8080/fornec/saveFornec', {
+            const response = await fetch('http://localhost:8443/fornec/saveFornec', {
                 method: 'POST', 
                 headers: {
                     'Content-Type': 'application/json',
@@ -172,8 +172,8 @@ function Fornec() {
                     <label className='fornec-label'> endereço:  </label>
                     <input type="text"  
                            onChange={handleChange} 
-                           name="endereco"  
-                           value={objFornec.endereco}
+                           name="end"  
+                           value={objFornec.end}
                            className="fornec-form-control" 
                     />
                 </div>         
@@ -187,6 +187,7 @@ function Fornec() {
                             className="fornec-form-control" 
                     />
                 </div>
+                
                 <div className='fornec-form-group'>  
                     <label className='fornec-label'> CEP: </label>
                     <input type="text" 
@@ -218,7 +219,7 @@ function Fornec() {
                 
                 </div>
                 
-                <div className="fornec-form-group">
+                    <div className="fornec-form-group">
                     <label className='fornec-label'>Departamento:  </label>
                     <input type="text"  
                            onChange={handleChange} 
@@ -260,9 +261,9 @@ function Fornec() {
             
                 <div className="fornec-form-group">
                     <label className='fornec-label'> Inscrição Municipal : </label>
-                    <input type="text" 
+                    <input type="text"  
                            onChange={handleChange} 
-                           ame="inscrMun" 
+                           name="inscrMun" 
                            value={objFornec.inscrMun}
                            className="fornec-form-control" 
                     />
@@ -272,7 +273,7 @@ function Fornec() {
                     <label className='fornec-label'> Telefone 1: </label>
                     <input type="text" 
                            onChange={handleChange} 
-                           name="telefone_1" 
+                           name="telefone1" 
                            value={objFornec.telefone1}
                            className="fornec-form-control" 
                     />
@@ -282,7 +283,7 @@ function Fornec() {
                     <label className='fornec-label'> Telefone 2: </label>
                     <input type="text"  
                            onChange={handleChange} 
-                           name="telefone_2" 
+                           name="telefone2" 
                            value={objFornec.telefone2}
                            className="fornec-form-control" 
                     />
@@ -292,7 +293,7 @@ function Fornec() {
                     <label className='fornec-label'> Telefone 3: </label>
                     <input type="text"  
                            onChange={handleChange} 
-                           name="telefone_3" 
+                           name="telefone3" 
                            value={objFornec.telefone3}
                            className="fornec-form-control" 
                     />
@@ -302,7 +303,7 @@ function Fornec() {
                     <label className='fornec-label'> Email 1: </label>
                     <input type="email"  
                            onChange={handleChange} 
-                           name="email_1" 
+                           name="email1" 
                            value={objFornec.email1}
                            className="fornec-form-control" 
                     />
@@ -312,7 +313,7 @@ function Fornec() {
                     <label className='fornec-label'> Email 2: </label>
                     <input type="email"  
                            onChange={handleChange} 
-                           name="email_2" 
+                           name="email2" 
                            value={objFornec.email2}
                            className="fornec-form-control" 
                     />
@@ -322,7 +323,7 @@ function Fornec() {
                     <label className='fornec-label'> Email 3: </label>
                     <input type="email"  
                            onChange={handleChange} 
-                           name="email_3"
+                           name="email3"
                            value={objFornec.email3}
                            className="fornec-form-control" 
                     />
@@ -332,7 +333,7 @@ function Fornec() {
                     <label className='fornec-label'> Descrição 1: </label>
                     <input type="text"  
                            onChange={handleChange} 
-                           name="desc_1" 
+                           name="desc1" 
                            value={objFornec.desc1}
                            className="fornec-form-control" 
                     />
@@ -342,7 +343,7 @@ function Fornec() {
                     <label className='fornec-label'> Descrição 2: </label>
                     <input type="text"  
                            onChange={handleChange} 
-                           name="desc_2" 
+                           name="desc2" 
                            value={objFornec.desc2}
                            className="fornec-form-control" 
                     />
@@ -351,7 +352,7 @@ function Fornec() {
                     <label className='fornec-label'> Descrição 3: </label>
                     <input type="text"  
                            onChange={handleChange} 
-                           name="desc_3" 
+                           name="desc3" 
                            value={objFornec.desc3}
                            className="fornec-form-control" 
                     />
@@ -361,7 +362,7 @@ function Fornec() {
                     <label className='fornec-label'> Descrição 4: </label>
                     <input type="text"  
                            onChange={handleChange} 
-                           name="desc_4" 
+                           name="desc4" 
                            value={objFornec.desc4}
                            className="fornec-form-control" 
                     />
@@ -371,7 +372,7 @@ function Fornec() {
                     <label className='fornec-label'> Descrição 5: </label>
                     <input type="text"  
                            onChange={handleChange} 
-                           name="desc_5" 
+                           name="desc5" 
                            value={objFornec.desc5}
                            className="fornec-form-control" 
                     />
@@ -381,7 +382,7 @@ function Fornec() {
                     <label className='fornec-label'> Descrição 6: </label>
                     <input type="text"  
                            onChange={handleChange} 
-                           name="desc_6" 
+                           name="desc6" 
                            value={objFornec.desc6}
                            className="fornec-form-control" 
                     />
@@ -401,7 +402,7 @@ function Fornec() {
                     <label className='fornec-label'> Rep 1: </label>
                     <input type="number"  
                            onChange={handleChange} 
-                           name="rep_1" 
+                           name="rep1" 
                            value={objFornec.rep1}
                            className="fornec-form-control" 
                     />
@@ -410,7 +411,7 @@ function Fornec() {
                     <label className='fornec-label'> Rep 2: </label>
                     <input type="number"  
                            onChange={handleChange} 
-                           name="rep_2"
+                           name="rep2"
                            value={objFornec.rep2}
                            className="fornec-form-control" 
                     />
@@ -420,7 +421,7 @@ function Fornec() {
                     <label className='fornec-label'> Rep 3: </label>
                     <input type="number"  
                             onChange={handleChange} 
-                            name="rep_3" 
+                            name="rep3" 
                             value={objFornec.rep3}
                             className="fornec-form-control" 
                     />
@@ -430,7 +431,7 @@ function Fornec() {
                     <label className='fornec-label'> Rep 4: </label>
                     <input type="numberxt"  
                            onChange={handleChange} 
-                           name="rep_4" 
+                           name="rep4" 
                            value={objFornec.rep4}
                            className="fornec-form-control"
                     />
@@ -441,7 +442,7 @@ function Fornec() {
                     <label className='fornec-label'> Plano Obs: </label>
                     <input type="text" 
                            onChange={handleChange} 
-                           name="plan_obs" 
+                           name="planObs" 
                            value={objFornec.planObs}
                            className="fornec-form-control" />
                 </div>

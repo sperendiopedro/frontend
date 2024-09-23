@@ -1,5 +1,5 @@
-.ufd-principal-div {
-    background-color: #f9f9f9;
+.familia2-principal-div {
+    background-color: #ebe7e7;
     width: 800px;
     padding: 20px;
     border-radius: 20px;
@@ -14,7 +14,7 @@
     align-items: center;
 }
 
-.ufd-titulo {
+.familia2-titulo {
     text-align: center;
     font-size: 45px;
     font-weight: 500;
@@ -22,7 +22,7 @@
     text-transform: uppercase;
 }
 
-.ufd-form {
+.familia2-form {
     width: 100%;
     display: flex; 
     align-items: center;
@@ -31,21 +31,22 @@
     gap: 10px;
 }
 
-.ufd-form-group{
+.familia2-form-group{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
 }
 
-.ufd-label{
+.familia2-label{
     color: #3f3f3f;
     font-weight: 500;
     font-size: 13px;
     text-transform: uppercase;
 }
 
-.ufd-form-control {
+
+.familia2-form-control {
     width: 500px;
     max-width: 100%;
     padding: 12px;
@@ -55,13 +56,32 @@
     font-size: 16px;
 }
 
-.ufd-form-control:focus {
-    border-color: #535ae5;
+.familia2-form-control-obs {
+    width: 500px;
+    height: 100px;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.familia2-form-control:focus {
+    border-color: #11ff6c;
     box-shadow: 0 0 8px rgba(83, 90, 229, 0.2);
     outline: none;
 }
 
-.ufd-button-group {
+.familia2-form-control-obs:focus {
+    border-color: #11ff6c;
+    box-shadow: 0 0 8px rgba(83, 90, 229, 0.2);
+    outline: none;
+}
+
+
+
+.familia2-button-group {
     display: flex;
     justify-content: space-between;
     width: 60%;
@@ -69,8 +89,8 @@
     margin-top: 20px;
 }
 
-.ufd-btn-register,
-.ufd-btn-cancel {
+.familia2-btn-register,
+.familia2-btn-cancel {
     flex: 1;
     margin: 0 5px;
     padding: 12px 20px;
@@ -82,42 +102,42 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.ufd-btn-register {
-    background-color: #535ae5;
+.familia2-btn-register {
+    background-color: #007015;
     color: #fff;
     margin-right: 40px;
 }
 
-.ufd-btn-register:hover {
-    background-color: #4349d2;
-    transform: scale(1.05);
+.familia2-btn-register:hover {
+    background-color: #00b825;
+    transform: scale(1.04);
 }
 
-.ufd-btn-cancel {
-    background-color: #ff851b;
+.familia2-btn-cancel {
+    background-color: #fe0000;
     color: #fff;
 }
 
-.ufd-btn-cancel:hover {
-    background-color: #e6761d;
-    transform: scale(1.05);
+.familia2-btn-cancel:hover {
+    background-color: #b40000;
+    transform: scale(1.04);
 }
 
 /* Media queries para responsividade */
 @media (max-width: 768px) {
-    .ufd-principal-div {
+    .familia2-loja1 {
         width: 90%;
         padding: 30px;
     }
-    .ufd-form {
+    .familia2-form {
         grid-template-columns: 1fr; /* Stacks elements on small screens */
     }
-    .ufd-button-group {
+    .button-familia2-group {
         flex-direction: column;
         gap: 10px; 
     }
-    .ufd-btn-register,
-    .ufd-btn-cancel {
+    .btn-familia2-register,
+    .btn-familia2-cancel {
         margin: 5px 0; /* Adjust margin for stacked buttons */
     }
 }

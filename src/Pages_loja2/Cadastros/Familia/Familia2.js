@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import "./Familia.css"
+import "./Familia2.css"
 
-function Familia(){
+function Familia2(){
 
     const[objFam, setObjFam] = useState({
         famEmp: {id: null},
@@ -65,44 +65,44 @@ function Familia(){
     }
     
     return (
-        <div className="familia-principal-div">
-            <h1 className="familia-titulo">Registro de familia</h1>
-            <form className="familia-form" onSubmit={handleSubmit}>
-                <div className="familia-form-group"> 
-                    <label className="familia-label"> Descrição: </label>
+        <div className="familia2-principal-div">
+            <h1 className="familia2-titulo">Registro de familia</h1>
+            <form className="familia2-form" onSubmit={handleSubmit}>
+                <div className="familia2-form-group"> 
+                    <label className="familia2-label"> Descrição: </label>
                     <input 
                         type="text" 
                         onChange={handleChange}
                         value={objFam.descr}
                         name="descr" 
-                        className="familia-form-control"
+                        className="familia2-form-control"
                     /> 
                 </div>
-                <div className="familia-form-group">    
-                    <label className="familia-label"> Observação: </label>
+                <div className="familia2-form-group">    
+                    <label className="familia2-label"> Observação: </label>
                     <input 
                         type="text" 
                         onChange={handleChange}
                         value={objFam.obs}
                         name="obs"
-                        className="familia-form-control-obs"
+                        className="familia2-form-control-obs"
                     /> 
                 </div>
             </form>             
 
-                <div className="familia-button-group">
+                <div className="familia2-button-group">
                     <input 
                         type="submit" 
                         value="inserir"
                         onClick={handleSubmit}
-                        className="btn familia-btn-register" 
+                        className="btn familia2-btn-register" 
                     /> 
         
                     <input 
                         type="button"
                         onClick={handleCancel}
                         value="Cancelar"
-                        className="btn familia-btn-cancel"
+                        className="btn familia2-btn-cancel"
                     />
                 </div>
 
@@ -110,4 +110,4 @@ function Familia(){
     );
 }
 
-export default Familia; 
+export default Familia2; 

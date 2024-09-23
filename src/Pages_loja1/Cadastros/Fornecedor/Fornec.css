@@ -84,10 +84,6 @@
     box-shadow: 0 0 10px rgba(83, 90, 229, 0.2); 
 }
 
-.fornec-form-control::placeholder {
-    color: #000000;
-    font-weight: bold;
-}
 
 .fornec-button-group {
     grid-column: span 2; 
