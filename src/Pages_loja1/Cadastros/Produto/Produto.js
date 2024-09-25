@@ -30,7 +30,7 @@ function Produto(){
         e.preventDefault(); 
         const token = localStorage.getItem('token'); 
         try{
-            const response = await fetch('http://localhost:8443/produto/register', {
+            const response = await fetch('https://grego-backend-1fc83ac18599.herokuapp.com/produto/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

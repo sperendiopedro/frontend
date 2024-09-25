@@ -19,6 +19,7 @@ import Familia2 from "./Pages_loja2/Cadastros/Familia/Familia2";
 import Produto2 from "./Pages_loja2/Cadastros/Produto/Produto2";
 import Cor2 from "./Pages_loja2/Cadastros/Cor/Cor2";
 import Acabmat2 from "./Pages_loja2/Cadastros/Acbmat/Acabmat2";
+import Maintenance from "./Usuario/Maintenance";
 
 
 
@@ -50,6 +51,7 @@ function RoutesApp() {
         <Route path="/store2/produto/register" element={<PrivateRoute element={<Produto2 />} />} />
         <Route path="/store2/acabmat/register" element={<PrivateRoute element={<Acabmat2 />} />} />
         <Route path="/store2/cor/register" element={<PrivateRoute element={<Cor2 />} />} />
+        <Route path="/maintenance" element={<PrivateRoute element={<Maintenance />} />} />
       </Routes>
     </BrowserRouter>
   );

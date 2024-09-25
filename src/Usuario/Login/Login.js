@@ -18,7 +18,7 @@ const Login = () => {
 
         const credentials = btoa(`${email}:${password}`);
         try {
-            const response = await fetch('http://localhost:8443/user/authenticate', {
+            const response = await fetch('https://grego-backend-1fc83ac18599.herokuapp.com/user/authenticate', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Basic ${credentials}`,
@@ -76,7 +76,7 @@ const Login = () => {
                 onKeyDown={handleKeyDown} 
             />
 
-            <Link className='login-password-recover' to='/user/password/recover'>Esqueceu sua senha?</Link>
+            <Link className='login-password-recover' to='/maintenance'>Esqueceu sua senha?</Link>
             
             <select 
                 className='login-option-control' 

@@ -30,7 +30,7 @@ function UFDForms() {
         e.preventDefault();
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch('http://localhost:8443/ufd/saveUfd', {
+            const response = await fetch('https://grego-backend-1fc83ac18599.herokuapp.com/ufd/saveUfd', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

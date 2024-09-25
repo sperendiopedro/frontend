@@ -74,7 +74,7 @@
 }
 
 .login-form-control::placeholder{
-    font-weight: 600;
+    font-weight: 500;
     opacity: 40%;
 }
 

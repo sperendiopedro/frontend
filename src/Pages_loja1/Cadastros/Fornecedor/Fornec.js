@@ -52,7 +52,7 @@ function Fornec() {
         const store = localStorage.getItem('store'); 
         const idStore = store === 'store1' ? 1 : 2; 
         
-        fetch(`http://localhost:8443/ufd/listByEmp/${idStore}`, {
+        fetch(`https://grego-backend-1fc83ac18599.herokuapp.com/ufd/listByEmp/${idStore}`, {
             method: 'GET', 
             headers: {
                 'Authorization': `Bearer ${token}`, 
@@ -101,7 +101,7 @@ function Fornec() {
     const handleSubmit = async (e) => {
         e.preventDefault(); 
         try {
-            const response = await fetch('http://localhost:8443/fornec/saveFornec', {
+            const response = await fetch('https://grego-backend-1fc83ac18599.herokuapp.com/fornec/saveFornec', {
                 method: 'POST', 
                 headers: {
                     'Content-Type': 'application/json',

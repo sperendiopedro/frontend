@@ -41,7 +41,7 @@
         // }
             
         const token = localStorage.getItem('token');
-            fetch("http://localhost:8443/empresa/saveEmp", {
+            fetch("https://grego-backend-1fc83ac18599.herokuapp.com/empresa/saveEmp", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -46,7 +46,7 @@ function UserForms() {
             return;
         }
 
-        fetch("http://localhost:8443/user/register", {
+        fetch("https://grego-backend-1fc83ac18599.herokuapp.com/user/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

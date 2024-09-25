@@ -52,7 +52,7 @@ function Fornec2() {
         const store = localStorage.getItem('store'); 
         const idStore = store === 'store1' ? 1 : 2; 
         
-        fetch(`http://localhost:8443/ufd/listByEmp/${idStore}`, {
+        fetch(`https://grego-backend-1fc83ac18599.herokuapp.com/ufd/listByEmp/${idStore}`, {
             method: 'GET', 
             headers: {
                 'Authorization': `Bearer ${token}`, 
