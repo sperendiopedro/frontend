@@ -18,7 +18,7 @@ const Login = () => {
 
         const credentials = btoa(`${email}:${password}`);
         try {
-            const response = await fetch('https://grego-backend-1fc83ac18599.herokuapp.com/user/authenticate', {
+            const response = await fetch('http://localhost:8443/user/authenticate', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Basic ${credentials}`,

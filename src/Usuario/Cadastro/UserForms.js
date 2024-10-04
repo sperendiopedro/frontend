@@ -84,48 +84,50 @@ function UserForms() {
                 <h1 className="user-title">Registrar</h1>
                 <h2 className="user-subtitle"> Faça o registro para ter acesso à aplicação!</h2>
                 <br></br>
-                <input 
-                    type="text" 
-                    onChange={handleChange} 
-                    name='nome' 
-                    value={objUser.nome}
-                    placeholder="Nome completo" 
-                    className="user-form-control"
-                /> 
-                <input 
-                    type="text" 
-                    onChange={handleChange} 
-                    name='setor' 
-                    value={objUser.setor}
-                    placeholder="Setor" 
-                    className="user-form-control"
-                /> 
-                <input 
-                    type="email" 
-                    onChange={handleChange} 
-                    name='email' 
-                    value={objUser.email}
-                    placeholder="exemplo@email.com" 
-                    className="user-form-control"
-                />
+                
+                <div className="input-group">    
+                    <input 
+                        type="text" 
+                        onChange={handleChange} 
+                        name='nome' 
+                        value={objUser.nome}
+                        className="input"
+                    /> 
+                    <label className="user-label">Nome completo:</label>
+                </div>   
+                <div className="input-group">
+                    <input 
+                        type="text" 
+                        onChange={handleChange} 
+                        name='setor' 
+                        value={objUser.setor}
+                        className="input"
+                    /> 
+                    <label className="user-label">Setor:</label>
+                </div>   
+                    <input 
+                        type="email" 
+                        onChange={handleChange} 
+                        name='email' 
+                        value={objUser.email}
+                        className="input"
+                    />
 
-                <input 
-                    type="password" 
-                    onChange={handleChange} 
-                    name='password' 
-                    value={objUser.password}
-                    placeholder="Senha" 
-                    className="user-form-control"
-                />
+                    <input 
+                        type="password" 
+                        onChange={handleChange} 
+                        name='password' 
+                        value={objUser.password}
+                        className="user-form-control"
+                    />
 
-                <input 
-                    type="password" 
-                    onChange={handleConfirmPasswordChange} 
-                    value={confirmPassword}
-                    placeholder="Confirme a senha" 
-                    className="user-form-control"
-                />
-         
+                    <input 
+                        type="password" 
+                        onChange={handleConfirmPasswordChange} 
+                        value={confirmPassword}
+                        className="user-form-control"
+                    />
+            
                 {errorMessage && <p className="user-register-error">{errorMessage}</p>}
          
                 <input 
