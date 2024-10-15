@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { isAuthenticated } from "./auth";
 import UFDForms from "./Pages_loja1/Cadastros/Ufd/UFDForms";
 import UserForms from "./Usuario/Cadastro/UserForms";
 import Header from "./Components/Header_loja1"; 
@@ -25,12 +26,14 @@ import Maintenance from "./Usuario/Maintenance";
 
 
 function RoutesApp() {
-  const isAuthenticated = !!localStorage.getItem('token'); 
   const selectedStore = localStorage.getItem('store'); 
+  
 
   return (
     <BrowserRouter>
-     {isAuthenticated && (selectedStore === 'store1' ? <Header /> : <Header2 />)}
+     {/* Conditionally render the header based on the selected store */}
+     {isAuthenticated() && (selectedStore === 'store1' ? <Header /> : <Header2 />)}
+     
       <Routes> 
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Login />} /> 

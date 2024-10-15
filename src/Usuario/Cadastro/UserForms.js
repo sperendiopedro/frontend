@@ -76,14 +76,13 @@ function UserForms() {
     };
 
     const navigate = useNavigate(); 
- 
 
     return (    
         <form onSubmit={handleSubmit}>
             <div className="user-principal-div">
                 <h1 className="user-title">Registrar</h1>
-                <h2 className="user-subtitle"> Faça o registro para ter acesso à aplicação!</h2>
-                <br></br>
+                <h2 className="user-subtitle">Faça o registro para ter acesso à aplicação!</h2>
+                <br />
                 
                 <div className="input-group">    
                     <input 
@@ -92,9 +91,11 @@ function UserForms() {
                         name='nome' 
                         value={objUser.nome}
                         className="input"
+                        required
                     /> 
                     <label className="user-label">Nome completo:</label>
                 </div>   
+                
                 <div className="input-group">
                     <input 
                         type="text" 
@@ -102,47 +103,58 @@ function UserForms() {
                         name='setor' 
                         value={objUser.setor}
                         className="input"
+                        required
                     /> 
                     <label className="user-label">Setor:</label>
                 </div>   
+
+                <div className="input-group">
                     <input 
                         type="email" 
                         onChange={handleChange} 
                         name='email' 
                         value={objUser.email}
                         className="input"
+                        required
                     />
+                    <label className="user-label">Email:</label>
+                </div>   
 
+                <div className="input-group">
                     <input 
                         type="password" 
                         onChange={handleChange} 
                         name='password' 
                         value={objUser.password}
-                        className="user-form-control"
+                        className="input"
+                        required
                     />
+                    <label className="user-label">Senha:</label>
+                </div>   
 
+                <div className="input-group">
                     <input 
                         type="password" 
                         onChange={handleConfirmPasswordChange} 
                         value={confirmPassword}
-                        className="user-form-control"
+                        className="input"
+                        required
                     />
-            
+                    <label className="user-label">Confirme sua senha:</label>
+                </div>   
+
                 {errorMessage && <p className="user-register-error">{errorMessage}</p>}
          
                 <input 
-                type="submit" 
-                value="Inserir" 
-                className="btn user-btn-register" 
+                    type="submit" 
+                    value="Inserir" 
+                    className="user-btn-register" 
                 /> 
 
                 <div className="user-login-redirect">
                     <p>Já possui uma conta? Faça</p>  
-                    <Link className='user-login-redirect-link' to="/login">Login</Link>
-
+                    <Link className="user-login-redirect-link" to="/login">Login</Link>
                 </div>
-    
-
             </div>
         </form>
     );

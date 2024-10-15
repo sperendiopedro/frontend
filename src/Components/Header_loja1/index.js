@@ -31,6 +31,16 @@ function Header(){
             <Link className="cadastros" to="/store1/home"> Mercadoria </Link>
             <Link className="cadastros" to="/store1/home"> Moeda </Link>
            
+
+        <div className="dropdown">
+            <div className="dropdown-toggle">Contas a pagar</div>
+            <div className="dropdown-menu"> 
+                <Link className='dropdown-item' to ="/store1/ctpg/cadastro">Cadastro de nota </Link>
+            
+            
+            
+            </div>         
+        </div>  
            
         <div className="dropdown">
             <div className="dropdown-toggle">Cadastros gerais</div>

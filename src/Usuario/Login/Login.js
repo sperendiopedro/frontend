@@ -25,7 +25,6 @@ const Login = () => {
                     'Content-Type': 'application/json',
                 },
             });
-
             if (response.ok) {
                 const token = await response.text();
                 localStorage.setItem('token', token);
@@ -53,7 +52,7 @@ const Login = () => {
             handleLogin();
         }
     };
-
+    
     return (
         <div className='login-principal-div'>
             <h1 className='login-title'> Bem vindo(a)</h1>
@@ -92,9 +91,7 @@ const Login = () => {
             {error && <p className='error-message'>{error}</p>}
             
            
-            <button onClick={handleLogin} className='-btn login-btn-primary'>
-                Entrar
-            </button>
+            <button onClick={handleLogin} className='-btn login-btn-primary'> Entrar </button>
             
             <div className='login-register-redirect'> 
                 <p>Não tem uma conta?</p>

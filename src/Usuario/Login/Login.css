@@ -13,8 +13,6 @@
     align-items: center;
 }
 
-
-   
 .login-title {
     font-size: 28px;
     color: rgb(67, 67, 67);
@@ -39,14 +37,14 @@
     margin-right: 10px;
 }
 
-.login-form-control {
+.login-form-control{
     width: 100%;
     padding: 10px 15px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 15px;
+    border-color: black;
     font-size: 16px;
-    color: #333;
     box-sizing: border-box; 
 }
 
